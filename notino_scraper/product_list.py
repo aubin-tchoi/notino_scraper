@@ -43,4 +43,11 @@ class ProductList:
         Adds a product to the list of product.
         :param product_info: A dictionary containing the information known on the product.
         """
-        self.products.append(Product(product_info))
+        new_product = Product(product_info)
+        for product in self.products:
+            if product == new_product:
+                product += new_product
+                break
+        # else clause if new_product has not been found in the list of products.
+        else:
+            self.products.append(new_product)
