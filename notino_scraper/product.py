@@ -1,3 +1,5 @@
+
+
 class Product:
     product_name: str
     description: str
@@ -16,6 +18,40 @@ class Product:
             self.prices = product_info["prices"]
         else:
             self.prices = []
+
+    def __repr__(self) -> str:
+        """
+        Computes a string representation by displaying the main features and then listing the recorded prices if any.
+        :return: The string representation of a product.
+        """
+        product_text = f"Name: {self.product_name}\nBrand: {self.brand}\nDescription: {self.description}"
+        if len(self.prices) == 0:
+            return f"{product_text}\nNo price recorded."
+        else:
+            prices_text = "\n\t".join([repr(price) for price in self.prices])
+            return f"{product_text}\nPrices recorded:\n\t{prices_text}"
+
+    def __eq__(self, other):
+        """
+        Defines the equality check between two Products.
+        :param other: The Product to check with.
+        :return: True if the two Products refer to the same item on the website.
+        """
+        return self.product_name.lower() == other.product_name.lower() and (
+                self.description.lower() == other.description.lower()) and (
+                       self.brand.lower() == other.brand.lower())
+
+    def __add__(self, other):
+        """
+        Defines the addition between two Products.
+        :param other: The Product to add to the current one.
+        :return: A Product that contains all the prices recorded.
+        """
+        if self != other:
+            raise AssertionError("Trying to add two Products that do not refer to the same item on the website.")
+        else:
+            self.prices += other.prices
+            return self
 
     def add_price(self, price_info: dict) -> None:
         """

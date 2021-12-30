@@ -1,5 +1,5 @@
 import json
-from product import Product
+from notino_scraper.product import Product
 
 
 class ProductList:
@@ -17,6 +17,13 @@ class ProductList:
             products = json.load(json_file)
         self.products = [Product(product) for product in products]
 
+    def __repr__(self) -> str:
+        """
+        Computes a string representation of this object by listing each product one after the other.
+        :return: The string representation of a list of products.
+        """
+        return "\n\n".join([repr(product) for product in self.products])
+
     def get_products(self) -> list[Product]:
         """
         Getter for the product list.
@@ -29,7 +36,7 @@ class ProductList:
         Saves the content back into the json file.
         """
         with open(self.filename, 'w') as json_file:
-            json.dump(self.products, json_file)
+            json.dump([product.__dict__ for product in self.products], json_file)
 
     def add_product(self, product_info: dict) -> None:
         """

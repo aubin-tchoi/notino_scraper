@@ -1,29 +1,34 @@
-from scraper import Scraper
-from product_list import ProductList
-from yaml import load, dump, YAMLError
+from notino_scraper.scraper import Scraper
+from notino_scraper.product_list import ProductList
+from yaml import safe_load, dump, YAMLError
 import os
 
 
 class NotinoScraper:
     # TODO: multiple prices per product
     # TODO: plot evolution of prices
+    # TODO: check if product is already in
 
     scraper: Scraper
     product_list: ProductList
-    config: dict
-    config_file: str
+    config_file: str = "./config.yml"
 
     def __init__(self) -> None:
         """
         Loads the config and instantiates a Scraper and a ProductList.
         """
-        self.config_file = "../config.yml"
         with open(self.config_file, 'r') as stream:
-            self.config = load(stream)
+            config = safe_load(stream)
         self.scraper = Scraper()
-        self.product_list = ProductList(self.config["datafile"])
+        while True:
+            try:
+                self.product_list = ProductList(config["datafile"])
+                break
+            except (IOError, AssertionError):
+                self.update_datafile(input("Please specify the path to the output json file: "))
 
-    def update_datafile(self, new_datafile: str) -> None:
+    @staticmethod
+    def update_datafile(new_datafile: str) -> None:
         """
         Updates the value associated with key "datafile" in the yaml config file.
         :param new_datafile:
@@ -33,10 +38,15 @@ class NotinoScraper:
             new_datafile += ".json"
         if not os.path.isfile(new_datafile):
             raise AssertionError("Invalid file path provided.")
-        self.config["datafile"] = new_datafile
-        with open(self.config_file, "w") as stream:
+
+        with open(NotinoScraper.config_file, 'r') as stream:
+            config = safe_load(stream)
+
+        config["datafile"] = new_datafile
+
+        with open(NotinoScraper.config_file, "w") as stream:
             try:
-                dump(self.config, stream, default_flow_style=False, allow_unicode=True)
+                dump(config, stream, default_flow_style=False, allow_unicode=True)
             except YAMLError as exc:
                 print(exc)
 
@@ -54,6 +64,7 @@ class NotinoScraper:
         :param product_name: The name of the product to add.
         """
         self.product_list.add_product(self.scraper.get_description(product_name))
+        self.product_list.save()
 
     def plot_evolution(self) -> None:
         pass
