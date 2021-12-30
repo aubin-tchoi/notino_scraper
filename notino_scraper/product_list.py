@@ -17,13 +17,12 @@ class ProductList:
             products = json.load(json_file)
         self.products = [Product(product) for product in products]
 
-    def retrieve_search_names(self) -> list[str]:
+    def get_products(self) -> list[Product]:
         """
-        Finds the list of the search names of the products.
-        The search name of a product is what you should write down in the search bar to find it.
-        :return: The list of the products' search names.
+        Getter for the product list.
+        :return: The list of the products.
         """
-        return [product.get_search_name() for product in self.products]
+        return self.products
 
     def save(self) -> None:
         """
