@@ -1,6 +1,6 @@
 import getopt
 import sys
-from notino_scraper.notino_scraper import NotinoScraper
+from notino_scraper import NotinoScraper
 
 if __name__ == '__main__':
     argv = sys.argv[1:]

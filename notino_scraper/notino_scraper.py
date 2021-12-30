@@ -7,11 +7,10 @@ import os
 class NotinoScraper:
     # TODO: multiple prices per product
     # TODO: plot evolution of prices
-    # TODO: check if product is already in
 
     scraper: Scraper
     product_list: ProductList
-    config_file: str = "./config.yml"
+    config_file: str = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "config.yml")
 
     def __init__(self) -> None:
         """
