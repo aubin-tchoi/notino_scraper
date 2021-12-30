@@ -4,6 +4,8 @@ This tool is designed to track the prices of some products available on the webs
 This website offers a large range of discounts and choosing the right moment to buy a product can save a lot of money.
 
 ## Use cases
+### Configure the output destination
+
 ### Add a product to the list of products
 
 ### Snapshot the prices of every product in the list
