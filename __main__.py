@@ -4,7 +4,9 @@ from notino_scraper import NotinoScraper
 
 if __name__ == '__main__':
     argv = sys.argv[1:]
-    opts, args = getopt.getopt(argv, "pso:a:v:", ["print", "take_snapshot", "output_file=", "add_product=", "verbose="])
+    opts, args = getopt.getopt(argv,
+                               "pso:a:v:g",
+                               ["print", "take_snapshot", "output_file=", "add_product=", "verbose=", "plot"])
     verbose = True
 
     for opt, arg in opts:
@@ -23,3 +25,5 @@ if __name__ == '__main__':
             notino_scraper.add_product(arg)
         if opt in ("-p", "--print"):
             print(notino_scraper.product_list)
+        if opt in ("-g", "--plot"):
+            notino_scraper.plot_evolution()

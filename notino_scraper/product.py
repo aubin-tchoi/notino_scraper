@@ -58,7 +58,7 @@ class Product:
         Adds a price to the list of prices recorded.
         :param price_info: A dictionary containing the following information: price, volume and current date.
         """
-        if price_info not in self.prices:
+        if price_info["date"] not in [price["date"] for price in self.prices]:
             self.prices.append(price_info)
 
     def get_search_name(self) -> str:
