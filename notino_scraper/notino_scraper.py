@@ -7,15 +7,20 @@ import os
 class NotinoScraper:
     # TODO: multiple prices per product
     # TODO: plot evolution of prices
+    # TODO: articles indisponibles
+    # TODO: remove product
+    # TODO: verbose
 
     scraper: Scraper
     product_list: ProductList
     config_file: str = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "config.yml")
+    verbose: bool
 
-    def __init__(self) -> None:
+    def __init__(self, verbose: bool = True) -> None:
         """
         Loads the config and instantiates a Scraper and a ProductList.
         """
+        self.verbose = verbose
         with open(self.config_file, 'r') as stream:
             config = safe_load(stream)
         self.scraper = Scraper()
@@ -56,13 +61,15 @@ class NotinoScraper:
         for product in self.product_list.get_products():
             product.add_price(self.scraper.get_price(product.get_search_name()))
         self.product_list.save()
+        if self.verbose:
+            print(self.product_list)
 
     def add_product(self, product_name: str) -> None:
         """
         Adds a product to the list of products.
         :param product_name: The name of the product to add.
         """
-        self.product_list.add_product(self.scraper.get_description(product_name))
+        self.product_list.add_product(self.scraper.get_description(product_name), self.verbose)
         self.product_list.save()
 
     def plot_evolution(self) -> None:

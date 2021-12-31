@@ -4,15 +4,17 @@ from notino_scraper import NotinoScraper
 
 if __name__ == '__main__':
     argv = sys.argv[1:]
-    opts, args = getopt.getopt(argv, "pso:a:", ["print", "take_snapshot", "output_file=", "add_product="])
+    opts, args = getopt.getopt(argv, "pso:a:v:", ["print", "take_snapshot", "output_file=", "add_product=", "verbose="])
+    verbose = True
 
     for opt, arg in opts:
         if opt in ("-o", "--output"):
             NotinoScraper.update_datafile(arg)
-            break
+        if opt in ("-v", "--verbose"):
+            verbose = arg
 
     # This instantiation takes some time.
-    notino_scraper = NotinoScraper()
+    notino_scraper = NotinoScraper(verbose)
 
     for opt, arg in opts:
         if opt in ("-s", "--take_snapshot"):

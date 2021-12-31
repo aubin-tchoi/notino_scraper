@@ -38,16 +38,22 @@ class ProductList:
         with open(self.filename, 'w') as json_file:
             json.dump([product.__dict__ for product in self.products], json_file)
 
-    def add_product(self, product_info: dict) -> None:
+    def add_product(self, product_info: dict, verbose: bool) -> None:
         """
         Adds a product to the list of product.
         :param product_info: A dictionary containing the information known on the product.
+        :param verbose: Verbose.
         """
         new_product = Product(product_info)
         for product in self.products:
             if product == new_product:
                 product += new_product
+                if verbose:
+                    print("Product already in the list.")
+                    print(product)
                 break
         # else clause if new_product has not been found in the list of products.
         else:
             self.products.append(new_product)
+            if verbose:
+                print(new_product)
