@@ -12,7 +12,6 @@ class NotinoScraper:
     # TODO: multiple prices per product
     # TODO: plot evolution of prices
     # TODO: articles indisponibles
-    # TODO: remove product
     # TODO: verbose
 
     scraper: Scraper
@@ -129,3 +128,5 @@ class NotinoScraper:
         plt.legend()
         plt.savefig(os.path.join(img_folder, f"prices_{image_count + 1}"))
 
+    def get_price(self, search_name: str) -> None:
+        print(self.scraper.fetch_product_info(search_name))
