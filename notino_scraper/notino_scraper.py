@@ -84,7 +84,7 @@ class NotinoScraper:
         Snapshots the prices of every product in the list.
         """
         for product in self.product_list.get_products():
-            product.add_price(self.scraper.get_price(product.get_search_name()))
+            product.add_prices(self.scraper.get_prices(product.get_search_name()))
         self.product_list.save()
         if self.verbose:
             print(self.product_list)

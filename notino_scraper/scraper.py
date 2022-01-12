@@ -52,19 +52,30 @@ class Scraper:
         :return: A dictionary whose keys are features and values methods that extract them.
         """
 
-        def format_fetched_info(fetched_info: str) -> str:
-            return fetched_info.replace("<!-- -->", "").strip()
+        def format_info(fetched_info: str) -> str:
+            return fetched_info.replace("<!-- -->", "").replace("&nbsp;", " ").strip()
 
-        def build_reader(css_selector: str, attribute: str) -> Callable:
-            return lambda: format_fetched_info(
+        def _single_selector_reader(css_selector: str, attribute: str) -> Callable:
+            return lambda: format_info(
                 self.web_driver.find_element(By.CSS_SELECTOR, css_selector).get_attribute(attribute))
 
+        def _find_prices():
+            try:
+                return [{"volume": format_info(
+                    variant.find_element(By.CSS_SELECTOR, "[class~=pd-variant-label]").get_attribute("innerHTML")),
+                    "price": variant.find_element(By.CSS_SELECTOR,
+                                                  "div > span").get_attribute("content")
+                } for variant in
+                    self.web_driver.find_element(value="pdVariantsTile").find_elements(By.TAG_NAME, "li")]
+            except NoSuchElementException:
+                return [{"price": _single_selector_reader("[id=pd-price] span", "content")(),
+                         "volume": _single_selector_reader("[id=pdSelectedVariant] [class*=Name] span", "innerHTML")()}]
+
         return {
-            "product_name": build_reader("div[id='pdHeader'] [class*=ProductName] span", "innerHTML"),
-            "description": build_reader("div[id='pdHeader'] [class*=Description]", "innerHTML"),
-            "brand": build_reader("div[id='pdHeader'] [class*=Brand]", "innerHTML"),
-            "price": build_reader("[id=pd-price] span", "content"),
-            "volume": build_reader("[id=pdSelectedVariant] [class*=Name] span", "innerHTML")
+            "product_name": _single_selector_reader("div[id='pdHeader'] [class*=ProductName] span", "innerHTML"),
+            "description": _single_selector_reader("div[id='pdHeader'] [class*=Description]", "innerHTML"),
+            "brand": _single_selector_reader("div[id='pdHeader'] [class*=Brand]", "innerHTML"),
+            "prices": _find_prices
         }
 
     def __init__(self, **kwargs) -> None:
@@ -164,12 +175,14 @@ class Scraper:
         """
         return self.fetch_product_info(product_name, "product_name", "description", "brand")
 
-    def get_price(self, product_name: str) -> dict:
+    def get_prices(self, product_name: str) -> list:
         """
         Finds the following information on a product: price as of the date the script is run, volume and current date.
         :param product_name: The name of the product to look into.
         :return: A dictionary containing the information mentioned above.
         """
-        price = self.fetch_product_info(product_name, "price", "volume")
-        price.update({"date": datetime.date.today().isoformat()})
-        return price
+        product_info = self.fetch_product_info(product_name, "prices")
+
+        for price in product_info["prices"]:
+            price.update({"date": datetime.date.today().isoformat()})
+        return product_info["prices"]

@@ -53,13 +53,14 @@ class Product:
             self.prices += other.prices
             return self
 
-    def add_price(self, price_info: dict) -> None:
+    def add_prices(self, prices: list[dict]) -> None:
         """
         Adds a price to the list of prices recorded.
-        :param price_info: A dictionary containing the following information: price, volume and current date.
+        :param prices: A dictionary containing the following information: price, volume and current date.
         """
-        if price_info["date"] not in [price["date"] for price in self.prices]:
-            self.prices.append(price_info)
+        for price_info in prices:
+            if price_info["date"] not in [price["date"] for price in self.prices]:
+                self.prices.append(price_info)
 
     def get_search_name(self) -> str:
         """

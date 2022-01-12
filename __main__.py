@@ -7,7 +7,7 @@ if __name__ == '__main__':
     opts, args = getopt.getopt(argv,
                                "pso:a:v:gf:",
                                ["print", "take_snapshot", "output_file=", "add_product=", "verbose=", "plot",
-                                "get_price="])
+                                "get_prices="])
     verbose = True
 
     for opt, arg in opts:
@@ -28,5 +28,5 @@ if __name__ == '__main__':
             print(notino_scraper.product_list)
         if opt in ("-g", "--plot"):
             notino_scraper.plot_evolution()
-        if opt in ("-f", "--get_price"):
+        if opt in ("-f", "--get_prices"):
             notino_scraper.get_price(arg)
