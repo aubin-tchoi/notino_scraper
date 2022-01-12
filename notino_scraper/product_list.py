@@ -1,5 +1,6 @@
 import json
 from notino_scraper.product import Product
+import traceback
 
 
 class ProductList:
@@ -35,8 +36,17 @@ class ProductList:
         """
         Saves the content back into the json file.
         """
-        with open(self.filename, 'w') as json_file:
-            json.dump([product.__dict__ for product in self.products], json_file)
+        with open(self.filename) as json_file:
+            backup = json.load(json_file)
+
+        try:
+            with open(self.filename, 'w') as json_file:
+                json.dump([product.__dict__ for product in self.products], json_file)
+        except:
+            print(f"An issue was raised when saving the json file:\n")
+            print(traceback.format_exc())
+            with open(self.filename, 'w') as json_file:
+                json.dump(backup, json_file)
 
     def add_product(self, product_info: dict, verbose: bool) -> None:
         """
