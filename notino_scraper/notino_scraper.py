@@ -94,8 +94,11 @@ class NotinoScraper:
         Adds a product to the list of products.
         :param product_name: The name of the product to add.
         """
-        self.product_list.add_product(self.scraper.get_description(product_name), self.verbose)
-        self.product_list.save()
+        if self.verbose:
+            print(f"\nLooking for: {product_name}")
+        if product_name != "":
+            self.product_list.add_product(self.scraper.get_description(product_name), self.verbose)
+            self.product_list.save()
 
     def plot_evolution(self, products_per_plot: int = 5) -> None:
         while True:

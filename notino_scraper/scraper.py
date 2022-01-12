@@ -12,6 +12,7 @@ from selenium.common.exceptions import TimeoutException
 from typing import Callable
 import datetime
 import nltk
+import traceback
 
 
 class Scraper:
@@ -61,10 +62,10 @@ class Scraper:
 
         def _find_prices():
             try:
-                return [{"volume": format_info(
-                    variant.find_element(By.CSS_SELECTOR, "[class~=pd-variant-label]").get_attribute("innerHTML")),
-                    "price": variant.find_element(By.CSS_SELECTOR,
-                                                  "div > span").get_attribute("content")
+                return [{
+                    "price": variant.find_element(By.CSS_SELECTOR, "div > span").get_attribute("content"),
+                    "volume": format_info(variant.find_element(
+                        By.CSS_SELECTOR, "[class~=pd-variant-label]").get_attribute("innerHTML"))
                 } for variant in
                     self.web_driver.find_element(value="pdVariantsTile").find_elements(By.TAG_NAME, "li")]
             except NoSuchElementException:
@@ -92,6 +93,16 @@ class Scraper:
         :return:
         """
         self.web_driver.close()
+
+    def is_product_available(self) -> bool:
+        """
+        Checks if the product found on the current page is available.
+        :return: True if the product is available, False otherwise.
+        """
+        unavailable_message = "Cet article n'est pas disponible actuellement"
+
+        return len(self.web_driver.find_elements(
+            By.CSS_SELECTOR, f"div[id=pdSelectedVariant] + div > span[innerHTML*='{unavailable_message}']")) == 0
 
     @staticmethod
     def result_match(first_string: str, second_string: str, threshold: float = 0.20) -> bool:
@@ -163,7 +174,13 @@ class Scraper:
             try:
                 fetched_info[feature] = feature_readers[feature]()
             except NoSuchElementException:
-                fetched_info[feature] = "Info not found."
+                print(f"Issue raised when retrieving the {feature} on the product {product_name}:\n")
+                print(traceback.format_exc())
+                if feature == "prices":
+                    if not self.is_product_available():
+                        fetched_info[feature] = [{"price": "Product not available."}]
+                else:
+                    fetched_info[feature] = "Info not found."
 
         return fetched_info
 
