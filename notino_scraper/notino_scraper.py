@@ -9,11 +9,6 @@ from collections import defaultdict
 
 
 class NotinoScraper:
-    # TODO: multiple prices per product
-    # TODO: plot evolution of prices
-    # TODO: articles indisponibles
-    # TODO: verbose
-
     scraper: Scraper
     product_list: ProductList
     config_file: str = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "config.yml")
