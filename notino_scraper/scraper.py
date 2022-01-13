@@ -100,9 +100,9 @@ class Scraper:
         :return: True if the product is available, False otherwise.
         """
         unavailable_message = "Cet article n'est pas disponible actuellement"
-
-        return len(self.web_driver.find_elements(
-            By.CSS_SELECTOR, f"div[id=pdSelectedVariant] + div > span[innerHTML*='{unavailable_message}']")) == 0
+        unavailable_spans = self.web_driver.find_elements(
+            By.CSS_SELECTOR, f"div[id=pdSelectedVariant] + div > span")
+        return not len(unavailable_spans) > 0 and unavailable_spans[0].get_attribute("innerHTML") == unavailable_message
 
     @staticmethod
     def result_match(first_string: str, second_string: str, threshold: float = 0.20) -> bool:
