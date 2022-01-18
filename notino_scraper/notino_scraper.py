@@ -115,7 +115,8 @@ class NotinoScraper:
             # There can be different sizes for the same product.
             plots = defaultdict(list)
             for price in product.prices:
-                plots[f"{product.get_search_name()} {price['volume']}"].append((price['date'], price['price']))
+                if price != "Info not found." and price['price'] != "Product not available.":
+                    plots[f"{product.get_search_name()} {price['volume']}"].append((price['date'], price['price']))
             for key in plots:
                 plt.plot([t[0] for t in plots[key]], [t[1] for t in plots[key]], label=key)
                 product_count += 1
@@ -125,8 +126,10 @@ class NotinoScraper:
                     plt.savefig(os.path.join(img_folder, f"prices_{image_count}"))
                     plt.figure()
 
-        plt.legend()
-        plt.savefig(os.path.join(img_folder, f"prices_{image_count + 1}"))
+        # Saving the last image if there is anything on it.
+        if product_count != 0:
+            plt.legend()
+            plt.savefig(os.path.join(img_folder, f"prices_{image_count + 1}"))
 
     def get_price(self, search_name: str) -> None:
         print(self.scraper.fetch_product_info(search_name))
