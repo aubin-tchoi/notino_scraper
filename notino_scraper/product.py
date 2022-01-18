@@ -67,4 +67,4 @@ class Product:
         Finds the "search name" of a product, which is what you will write down in the search bar to find it.
         :return: The search name of the product.
         """
-        return f"{self.brand} {self.product_name}"
+        return f"{self.brand.replace('&amp;', '&')} {self.product_name.replace('&amp;', '&')}"
