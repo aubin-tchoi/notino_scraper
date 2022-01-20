@@ -37,7 +37,6 @@ class NotinoScraper:
         Updates the value associated with the provided key in the yaml config file.
         :param key: The key to update.
         :param new_value: The value to update with.
-        :return:
         """
         with open(NotinoScraper.config_file, 'r') as stream:
             config = safe_load(stream)
@@ -55,7 +54,6 @@ class NotinoScraper:
         """
         Updates the value associated with key "datafile" in the yaml config file.
         :param new_datafile: The value to replace with.
-        :return:
         """
         if not new_datafile.endswith(".json"):
             new_datafile += ".json"
@@ -69,12 +67,18 @@ class NotinoScraper:
         """
         Updates the value associated with key "img_folder" in the yaml config file.
         :param new_folder: The value to replace with.
-        :return:
         """
-        if not os.path.isdir(new_folder):
-            raise AssertionError("Invalid folder path provided.")
+        assert os.path.isdir(new_folder), "Invalid folder path provided."
 
         NotinoScraper.update_config("img_folder", new_folder)
+
+    @staticmethod
+    def update_products_per_plot(products_per_plot: str) -> None:
+        """
+        Updates the value associated with key "products_per_plot" in the yaml config file.
+        :param products_per_plot: The value to replace with.
+        """
+        NotinoScraper.update_config("products_per_plot", products_per_plot)
 
     def take_snapshot(self) -> None:
         """
@@ -99,15 +103,19 @@ class NotinoScraper:
             self.product_list.add_product(self.scraper.get_description(product_name), self.verbose)
             self.product_list.save()
 
-    def plot_evolution(self, products_per_plot: int = 5) -> None:
+    def plot_evolution(self) -> None:
         while True:
             try:
                 with open(self.config_file, 'r') as stream:
                     config = safe_load(stream)
                 img_folder = config["img_folder"]
+                products_per_plot = int(config["products_per_plot"])
                 break
-            except KeyError:
-                self.update_img_folder(input("Please specify the folder in which the images will be stored: "))
+            except KeyError as e:
+                if e.args[0] == "img_folder":
+                    self.update_img_folder(input("Please specify the folder in which the images will be stored: "))
+                elif e.args[0] == "products_per_plot":
+                    self.update_products_per_plot("5")
 
         plt.figure()
         sns.set(color_codes=True)
