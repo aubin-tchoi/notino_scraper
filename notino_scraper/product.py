@@ -1,8 +1,4 @@
 class Product:
-    product_name: str
-    description: str
-    brand: str
-    prices: list[dict]
 
     def __init__(self, product_info: dict) -> None:
         """

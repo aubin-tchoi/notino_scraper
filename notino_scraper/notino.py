@@ -10,14 +10,12 @@ from collections import defaultdict
 
 
 class NotinoScraper:
-    scraper: Scraper
-    product_list: ProductList
     config_file: str = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "config.yml")
-    verbose: bool
 
     def __init__(self, verbose: bool = True) -> None:
         """
         Loads the config and instantiates a Scraper and a ProductList.
+        :param verbose: The level of verbose to use. True means more messages printed.
         """
         self.verbose = verbose
         self.scraper = Scraper()
@@ -104,6 +102,9 @@ class NotinoScraper:
             self.product_list.save()
 
     def plot_evolution(self) -> None:
+        """
+        Plots the evolution of the prices of each product and stores the plots in the image folder.
+        """
         while True:
             try:
                 with open(self.config_file, 'r') as stream:
@@ -141,6 +142,10 @@ class NotinoScraper:
             plt.legend()
             plt.savefig(os.path.join(img_folder, f"prices_{image_count + 1}"))
 
-    def get_price(self, search_names: str) -> None:
-        for search_name in search_names.split("; "):
-            print(Product(self.scraper.fetch_product_info(search_name)))
+    def get_price(self, search_name: str) -> None:
+        """
+        Prints the current price of a product.
+        Mostly useful for debugging purposes when used without headless mode.
+        :param search_name: The name of the product to search for.
+        """
+        print(Product(self.scraper.fetch_product_info(search_name)))

@@ -16,8 +16,6 @@ import traceback
 
 
 class Scraper:
-    web_driver: WebDriver
-    info_list: dict
 
     @staticmethod
     def setup_webdriver(**kwargs) -> WebDriver:

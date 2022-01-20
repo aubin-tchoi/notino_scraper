@@ -4,8 +4,6 @@ import traceback
 
 
 class ProductList:
-    filename: str
-    products: list[Product]
 
     def __init__(self, filename: str) -> None:
         """
