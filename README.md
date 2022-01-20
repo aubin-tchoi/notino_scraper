@@ -4,8 +4,6 @@ This tool is designed to track the prices of some products available on the webs
 
 This website offers a large range of discounts and choosing the right moment to buy a product can save a lot of money.
 
----
-
 ## Description
 
 This project can be used in command line by calling the project directory:
@@ -48,8 +46,6 @@ You can use the following command to record the prices of every product in the l
 This command will loop over each product already recorded in the `.json` file and append to its list of prices the price
 found as of the current date. If there is already a price in the file for the same date and volume it will not be added.
 
----
-
 ## Processing the data
 
 ### Plotting the evolution of the prices of each product over time
@@ -72,8 +68,6 @@ You can use the following command to pretty-print the data stored in the `.json`
 
 Work in progress.
 
----
-
 ## Additional feature
 
 You can also use the following command to use this tool directly instead of using it through the `.json` file:
@@ -84,8 +78,6 @@ You can also use the following command to use this tool directly instead of usin
 > This feature is mostly useful for debugging purposes
 > considering that it will be faster to go on the website and see for yourself.
 
----
-
 ## Verbose
 
 You can set the level of verbose through the command line parameter `-v`. There are currently two levels available, by
@@ -94,8 +86,6 @@ default the highest level of verbose will be used and you will have to use the f
 - `python notino_scraper -v: "false" <other_parameters>`
 
 The other parameters are the ones mentioned above (`-p` to print, `-s` to snapshot, `-a` to add a product, ...).
-
----
 
 ## Configuration
 
