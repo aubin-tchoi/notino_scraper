@@ -55,8 +55,7 @@ class NotinoScraper:
         """
         if not new_datafile.endswith(".json"):
             new_datafile += ".json"
-        if not os.path.isfile(new_datafile):
-            raise AssertionError("Invalid file path provided.")
+        assert os.path.isfile(new_datafile), "Invalid file path provided."
 
         NotinoScraper.update_config("datafile", new_datafile)
 
@@ -77,6 +76,33 @@ class NotinoScraper:
         :param products_per_plot: The value to replace with.
         """
         NotinoScraper.update_config("products_per_plot", products_per_plot)
+
+    @staticmethod
+    def set_config_parameters() -> None:
+        """
+        Sets every existing parameter in the configuration by asking for user input on each of them.
+        Also validates the input and asks for it again if an incorrect value is passed.
+        """
+        enter = "(press ENTER to leave it as it is): "
+        config_parameters = {
+            'datafile': (f"Please specify the path to the output json file {enter}",
+                         NotinoScraper.update_datafile),
+            'img_folder': (f"Please specify the folder in which the images will be stored {enter}",
+                           NotinoScraper.update_img_folder),
+            'products_per_plot': (f"Please specify how many products should be displayed on each graph {enter}",
+                                  NotinoScraper.update_products_per_plot)
+        }
+        for parameter in config_parameters:
+            # Asking for user input again and again until a correct value is provided or the default value is kept.
+            while True:
+                user_input = input(config_parameters[parameter][0])
+                try:
+                    if user_input != "":
+                        config_parameters[parameter][1](user_input)
+                    break
+                except AssertionError:
+                    print("Invalid input, please try again.")
+        print("You're all set, thank you.")
 
     def take_snapshot(self) -> None:
         """
