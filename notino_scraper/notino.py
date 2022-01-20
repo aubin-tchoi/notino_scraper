@@ -1,5 +1,6 @@
 from notino_scraper.scraper import Scraper
 from notino_scraper.product_list import ProductList
+from notino_scraper.product import Product
 from yaml import safe_load, dump, YAMLError
 
 import seaborn as sns
@@ -132,5 +133,6 @@ class NotinoScraper:
             plt.legend()
             plt.savefig(os.path.join(img_folder, f"prices_{image_count + 1}"))
 
-    def get_price(self, search_name: str) -> None:
-        print(self.scraper.fetch_product_info(search_name))
+    def get_price(self, search_names: str) -> None:
+        for search_name in search_names.split("; "):
+            print(Product(self.scraper.fetch_product_info(search_name)))
