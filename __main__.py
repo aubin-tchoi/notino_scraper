@@ -2,12 +2,19 @@ import getopt
 import sys
 from notino_scraper import NotinoScraper
 
+
 if __name__ == '__main__':
     argv = sys.argv[1:]
     opts, args = getopt.getopt(argv,
                                "pso:a:v:gf:m:",
-                               ["print", "take_snapshot", "output_file=", "add_product=", "verbose=", "plot",
-                                "get_prices=", "add_products="])
+                               ["print",
+                                "take_snapshot",
+                                "output_file=",
+                                "add_product=",
+                                "verbose=",
+                                "plot",
+                                "get_prices=",
+                                "add_products="])
     verbose = True
 
     for opt, arg in opts:
