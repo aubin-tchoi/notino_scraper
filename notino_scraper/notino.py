@@ -19,14 +19,15 @@ class NotinoScraper:
         Loads the config and instantiates a Scraper and a ProductList.
         """
         self.verbose = verbose
-        with open(self.config_file, 'r') as stream:
-            config = safe_load(stream)
         self.scraper = Scraper()
         while True:
             try:
+                with open(self.config_file, 'r') as stream:
+                    config = safe_load(stream)
                 self.product_list = ProductList(config["datafile"])
                 break
             except (IOError, AssertionError):
+                print("An error occurred when opening the json file.")
                 self.update_datafile(input("Please specify the path to the output json file: "))
 
     @staticmethod
