@@ -23,7 +23,8 @@ class ProductList:
         Computes a string representation of this object by listing each product one after the other.
         :return: The string representation of a list of products.
         """
-        return "\n\n".join([repr(product) for product in self.products])
+        return "\n\n".join([repr(product) for product in self.products]) +\
+               f"\n\nFound prices for {len(self.products)} products."
 
     def get_products(self) -> list[Product]:
         """
