@@ -6,7 +6,7 @@ from notino_scraper import *
 if __name__ == '__main__':
     argv = sys.argv[1:]
     opts, args = getopt.getopt(argv,
-                               "pso:a:v:gf:m:",
+                               "pso:a:v:gf:m:c",
                                ["print",
                                 "take_snapshot",
                                 "output_file=",
@@ -14,7 +14,8 @@ if __name__ == '__main__':
                                 "verbose=",
                                 "plot",
                                 "get_prices=",
-                                "add_products="])
+                                "add_products=",
+                                "set_config"])
     verbose = True
 
     for opt, arg in opts:
@@ -22,6 +23,9 @@ if __name__ == '__main__':
             NotinoScraper.update_datafile(arg)
         if opt in ("-v", "--verbose"):
             verbose = arg not in ["False", "false", "N", "n"]
+        if opt in ("-c", "--set_config"):
+            NotinoScraper.update_datafile(input("Please specify the path to the output json file: "))
+            NotinoScraper.update_img_folder(input("Please specify the folder in which the images will be stored: "))
 
     # This instantiation takes some time.
     notino_scraper = NotinoScraper(verbose)
