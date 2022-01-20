@@ -28,11 +28,10 @@ customized use.
 
 #### Adding products to the list of products
 
-You can use the following commands to add a product or a list of products to the list of tracked products.
+You can use the following commands to add products to the list of tracked products.
 
-- `python notino_scraper -a: <product_name>`: adds a single product.
-- `python notino_scraper -m: <product_names; product_2; ...>`: adds a list of products. Make sure you separate each
-  product name with a semicolon and a space.
+- `python notino_scraper -a: <product_1; product_2; ...>`: adds a list of products. If there is more than one product,
+  make sure you separate each product name with a semicolon and a space.
 
 > *Note*: there is no need to be exactly accurate on the names of the product you wish to add.
 > The product added will be the first result that appears in the search bar when typing the name you entered.
