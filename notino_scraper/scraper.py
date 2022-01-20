@@ -65,12 +65,14 @@ class Scraper:
                 return [{
                     "price": variant.find_element(By.CSS_SELECTOR, "div > span").get_attribute("content"),
                     "volume": format_info(variant.find_element(
-                        By.CSS_SELECTOR, "[class~=pd-variant-label]").get_attribute("innerHTML"))
+                        By.CSS_SELECTOR, "[class~=pd-variant-label]").get_attribute("innerHTML")),
+                    "date": datetime.date.today().isoformat()
                 } for variant in
                     self.web_driver.find_element(value="pdVariantsTile").find_elements(By.TAG_NAME, "li")]
             except NoSuchElementException:
                 return [{"price": _single_selector_reader("[id=pd-price] span", "content")(),
-                         "volume": _single_selector_reader("[id=pdSelectedVariant] [class*=Name] span", "innerHTML")()}]
+                         "volume": _single_selector_reader("[id=pdSelectedVariant] [class*=Name] span", "innerHTML")(),
+                         "date": datetime.date.today().isoformat()}]
 
         return {
             "product_name": _single_selector_reader("div[id='pdHeader'] [class*=ProductName] span", "innerHTML"),
@@ -87,10 +89,9 @@ class Scraper:
         self.web_driver = self.setup_webdriver(**kwargs)
         self.info_list = self.set_info_list()
 
-    def __del__(self):
+    def __del__(self) -> None:
         """
         Closes the WebDriver.
-        :return:
         """
         self.web_driver.close()
 
@@ -127,7 +128,7 @@ class Scraper:
         :return: A method that will return True if the result section has finished loading and False otherwise.
         """
 
-        def _predicate(web_driver: WebDriver):
+        def _predicate(web_driver: WebDriver) -> bool:
             try:
                 elements = web_driver.find_elements(By.CSS_SELECTOR,
                                                     "div[id='header-suggestProductCol'] a[id='header-productWrapper']")
@@ -178,7 +179,8 @@ class Scraper:
                 print(traceback.format_exc())
                 if feature == "prices":
                     if not self.is_product_available():
-                        fetched_info[feature] = [{"price": "Product not available."}]
+                        fetched_info[feature] = [{"price": "Product not available.",
+                                                  "date": datetime.date.today().isoformat()}]
                 else:
                     fetched_info[feature] = "Info not found."
 
@@ -198,8 +200,4 @@ class Scraper:
         :param product_name: The name of the product to look into.
         :return: A dictionary containing the information mentioned above.
         """
-        product_info = self.fetch_product_info(product_name, "prices")
-
-        for price in product_info["prices"]:
-            price.update({"date": datetime.date.today().isoformat()})
-        return product_info["prices"]
+        return self.fetch_product_info(product_name, "prices")["prices"]
