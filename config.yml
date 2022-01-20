@@ -1,4 +1,4 @@
 ---
-datafile: C:\Users\aubin\Downloads\products.json
-img_folder: C:\Users\aubin\Downloads\images
+datafile: C:\Users\<user>\products.json
+img_folder: C:\Users\<user>\images
 ...
