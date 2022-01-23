@@ -180,6 +180,9 @@ class Scraper:
                     if not self.is_product_available():
                         fetched_info[feature] = [{"price": "Product not available.",
                                                   "date": datetime.date.today().isoformat()}]
+                    else:
+                        fetched_info[feature] = [{"price": "Price not found.",
+                                                  "date": datetime.date.today().isoformat()}]
                 else:
                     fetched_info[feature] = "Info not found."
 
