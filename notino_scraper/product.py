@@ -53,9 +53,9 @@ class Product:
         :param prices: A dictionary containing the following information: price, volume and current date.
         """
         for price_info in prices:
-            if (price_info["date"], price_info["volume"]) not in [(price["date"], price["volume"]) for price in
-                                                                  self.prices]:
-                self.prices.append(price_info)
+            if price_info["date"] not in [price["date"] for price in self.prices]:
+                if "volume" not in price_info or price_info["volume"] not in [price["volume"] for price in self.prices]:
+                    self.prices.append(price_info)
 
     def get_search_name(self) -> str:
         """
