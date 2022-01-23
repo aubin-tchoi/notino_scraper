@@ -101,7 +101,8 @@ class Scraper:
         unavailable_message = "Cet article n'est pas disponible actuellement"
         unavailable_spans = self.web_driver.find_elements(
             By.CSS_SELECTOR, f"div[id=pdSelectedVariant] + div > span")
-        return not len(unavailable_spans) > 0 and unavailable_spans[0].get_attribute("innerHTML") == unavailable_message
+        return not (len(unavailable_spans) > 0 and unavailable_spans[0].get_attribute(
+            "innerHTML") == unavailable_message)
 
     @staticmethod
     def result_match(first_string: str, second_string: str, threshold: float = 0.20) -> bool:
