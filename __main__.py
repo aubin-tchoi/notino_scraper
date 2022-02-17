@@ -1,6 +1,6 @@
 import getopt
 import sys
-from notino_scraper import *
+from notino_scraper import NotinoScraper
 
 if __name__ == '__main__':
     argv = sys.argv[1:]
@@ -44,4 +44,4 @@ if __name__ == '__main__':
                 notino_scraper.get_price(search_name)
 
     if verbose:
-        print("Execution sucessfuly ended.")
+        print("Execution successfully ended.")
