@@ -42,3 +42,6 @@ if __name__ == '__main__':
         if opt in ("-f", "--get_prices"):
             for search_name in arg.split("; "):
                 notino_scraper.get_price(search_name)
+
+    if verbose:
+        print("Execution sucessfuly ended.")
