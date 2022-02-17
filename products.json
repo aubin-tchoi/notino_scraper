@@ -1,1 +1,3018 @@
-[{"product_name": "Moustache", "description": "Eau de Toilette pour homme", "brand": "Rochas", "prices": [{"price": "26,00", "volume": "125 ml", "date": "2021-12-30"}, {"price": "26,00", "volume": "125 ml", "date": "2021-12-31"}, {"price": "26,00", "volume": "125 ml", "date": "2022-01-01"}, {"price": "26,00", "volume": "125 ml", "date": "2022-01-03"}, {"price": "29,93", "volume": "125 ml", "date": "2022-01-05"}, {"price": "29,93", "volume": "125 ml", "date": "2022-01-06"}, {"price": "29,93", "volume": "125 ml", "date": "2022-01-07"}, {"price": "31,35", "volume": "125 ml", "date": "2022-01-09"}, {"price": "31,35", "volume": "125 ml", "date": "2022-01-11"}, {"volume": "125 ml", "price": "31,35", "date": "2022-01-12"}, {"price": "31,35", "volume": "125 ml", "date": "2022-01-13"}, {"price": "32,85", "volume": "75 ml", "date": "2022-01-14"}, {"price": "29,00", "volume": "75 ml", "date": "2022-01-17"}, {"price": "29,00", "volume": "75 ml", "date": "2022-01-18"}, {"price": "29,00", "volume": "75 ml", "date": "2022-01-19"}, {"price": "29,00", "volume": "75 ml", "date": "2022-01-20"}]}, {"product_name": "Moscow Mule", "description": "Eau de Parfum pour femme", "brand": "Juliette has a gun", "prices": [{"price": "71,50", "volume": "100 ml", "date": "2021-12-30"}, {"price": "71,50", "volume": "100 ml", "date": "2021-12-31"}, {"price": "71,50", "volume": "100 ml", "date": "2022-01-01"}, {"price": "71,50", "volume": "100 ml", "date": "2022-01-03"}, {"price": "71,50", "volume": "100 ml", "date": "2022-01-05"}, {"price": "71,50", "volume": "100 ml", "date": "2022-01-06"}, {"price": "71,50", "volume": "100 ml", "date": "2022-01-07"}, {"price": "71,50", "volume": "100 ml", "date": "2022-01-09"}, {"price": "71,50", "volume": "100 ml", "date": "2022-01-11"}, {"volume": "100 ml", "price": "71,50", "date": "2022-01-12"}, {"price": "71,50", "volume": "100 ml", "date": "2022-01-13"}, {"price": "71,50", "volume": "100 ml", "date": "2022-01-14"}, {"price": "64,50", "volume": "100 ml", "date": "2022-01-17"}, {"price": "65,79", "volume": "100 ml", "date": "2022-01-18"}, {"price": "65,79", "volume": "100 ml", "date": "2022-01-19"}, {"price": "65,79", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Not a Perfume Superdose", "description": "Eau de Parfum mixte", "brand": "Juliette has a gun", "prices": [{"price": "86,00", "volume": "100 ml", "date": "2021-12-30"}, {"price": "93,50", "volume": "100 ml", "date": "2021-12-31"}, {"price": "84,40", "volume": "100 ml", "date": "2022-01-01"}, {"price": "84,40", "volume": "100 ml", "date": "2022-01-03"}, {"price": "81,00", "volume": "100 ml", "date": "2022-01-05"}, {"price": "84,40", "volume": "100 ml", "date": "2022-01-06"}, {"price": "84,40", "volume": "100 ml", "date": "2022-01-07"}, {"price": "84,40", "volume": "100 ml", "date": "2022-01-09"}, {"price": "84,40", "volume": "100 ml", "date": "2022-01-11"}, {"volume": "100 ml", "price": "84,40", "date": "2022-01-12"}, {"price": "84,40", "volume": "100 ml", "date": "2022-01-13"}, {"price": "84,40", "volume": "100 ml", "date": "2022-01-14"}, {"price": "74,30", "volume": "100 ml", "date": "2022-01-17"}, {"price": "74,30", "volume": "100 ml", "date": "2022-01-18"}, {"price": "74,30", "volume": "100 ml", "date": "2022-01-19"}, {"price": "74,30", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Eau d\u2019Hadrien", "description": "Eau de Parfum pour homme", "brand": "Annick Goutal", "prices": [{"price": "91,50", "volume": "100 ml", "date": "2021-12-31"}, {"price": "91,50", "volume": "100 ml", "date": "2022-01-01"}, {"price": "91,50", "volume": "100 ml", "date": "2022-01-03"}, {"price": "91,50", "volume": "100 ml", "date": "2022-01-05"}, {"price": "91,50", "volume": "100 ml", "date": "2022-01-06"}, {"price": "91,50", "volume": "100 ml", "date": "2022-01-07"}, {"price": "91,50", "volume": "100 ml", "date": "2022-01-09"}, {"price": "91,50", "volume": "100 ml", "date": "2022-01-11"}, {"volume": "100 ml", "price": "91,50", "date": "2022-01-12"}, {"price": "91,50", "volume": "100 ml", "date": "2022-01-13"}, {"price": "91,50", "volume": "100 ml", "date": "2022-01-14"}, {"price": "93,90", "volume": "100 ml", "date": "2022-01-17"}, {"price": "93,90", "volume": "100 ml", "date": "2022-01-18"}, {"price": "93,90", "volume": "100 ml", "date": "2022-01-19"}, {"price": "93,90", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Tom of Finland", "description": "Eau de Parfum pour homme", "brand": "Etat Libre d\u2019Orange", "prices": [{"price": "84,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "84,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "90,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "90,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "90,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "90,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "90,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Hermann a Mes Cotes Me Paraissait Une Ombre", "description": "Eau de Parfum mixte", "brand": "Etat Libre d\u2019Orange", "prices": [{"price": "73,10", "volume": "100 ml", "date": "2022-01-12"}, {"price": "73,10", "volume": "100 ml", "date": "2022-01-13"}, {"price": "73,10", "volume": "100 ml", "date": "2022-01-14"}, {"price": "86,90", "volume": "100 ml", "date": "2022-01-17"}, {"price": "86,90", "volume": "100 ml", "date": "2022-01-18"}, {"price": "86,90", "volume": "100 ml", "date": "2022-01-19"}, {"price": "86,90", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Yes I Do", "description": "Eau de Parfum pour femme", "brand": "Etat Libre d\u2019Orange", "prices": [{"price": "58,00", "volume": "50 ml", "date": "2022-01-12"}, {"price": "58,00", "volume": "50 ml", "date": "2022-01-13"}, {"price": "58,00", "volume": "50 ml", "date": "2022-01-14"}, {"price": "58,00", "volume": "50 ml", "date": "2022-01-17"}, {"price": "58,00", "volume": "50 ml", "date": "2022-01-18"}, {"price": "58,00", "volume": "50 ml", "date": "2022-01-19"}, {"price": "58,00", "volume": "50 ml", "date": "2022-01-20"}]}, {"product_name": "Like This", "description": "Eau de Parfum pour femme", "brand": "Etat Libre d\u2019Orange", "prices": [{"price": "114,40", "volume": "100 ml", "date": "2022-01-12"}, {"price": "114,40", "volume": "100 ml", "date": "2022-01-13"}, {"price": "119,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "119,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "120,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "120,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "120,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Vanilla Vibes", "description": "Eau de Parfum mixte", "brand": "Juliette has a gun", "prices": [{"price": "69,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "69,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "69,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "82,90", "volume": "100 ml", "date": "2022-01-17"}, {"price": "82,90", "volume": "100 ml", "date": "2022-01-18"}, {"price": "82,90", "volume": "100 ml", "date": "2022-01-19"}, {"price": "82,90", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Les Infusions:  Infusion Iris", "description": "Eau de Parfum pour femme", "brand": "Prada", "prices": [{"price": "131,00", "volume": "200 ml", "date": "2022-01-12"}, {"price": "131,00", "volume": "200 ml", "date": "2022-01-13"}, {"price": "131,00", "volume": "200 ml", "date": "2022-01-14"}, {"price": "131,00", "volume": "200 ml", "date": "2022-01-17"}, {"price": "131,00", "volume": "200 ml", "date": "2022-01-18"}, {"price": "131,00", "volume": "200 ml", "date": "2022-01-19"}, {"price": "131,00", "volume": "200 ml", "date": "2022-01-20"}]}, {"product_name": "La Tulipe", "description": "Eau de Parfum pour femme", "brand": "Byredo", "prices": [{"price": "190,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Ylang Ylang Nosy Be", "description": "Eau de Parfum pour femme", "brand": "Perris Monte Carlo", "prices": [{"price": "135,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "135,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "135,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "136,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "136,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "136,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "136,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Petite Ch\u00e9rie", "description": "Eau de Parfum pour femme", "brand": "Annick Goutal", "prices": [{"price": "117,18", "volume": "100 ml", "date": "2022-01-12"}, {"price": "117,18", "volume": "100 ml", "date": "2022-01-13"}, {"price": "117,18", "volume": "100 ml", "date": "2022-01-14"}, {"price": "103,20", "volume": "100 ml", "date": "2022-01-17"}, {"price": "103,20", "volume": "100 ml", "date": "2022-01-18"}, {"price": "103,20", "volume": "100 ml", "date": "2022-01-19"}, {"price": "103,20", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Songes", "description": "", "brand": "Annick Goutal", "prices": [{"price": "121,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "121,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "121,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "145,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "145,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "145,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "145,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Grand Amour", "description": "Eau de Parfum pour femme", "brand": "Annick Goutal", "prices": [{"price": "101,51", "volume": "100 ml", "date": "2022-01-12"}, {"price": "101,51", "volume": "100 ml", "date": "2022-01-13"}, {"price": "101,51", "volume": "100 ml", "date": "2022-01-14"}, {"price": "89,40", "volume": "100 ml", "date": "2022-01-17"}, {"price": "89,40", "volume": "100 ml", "date": "2022-01-18"}, {"price": "89,40", "volume": "100 ml", "date": "2022-01-19"}, {"price": "89,40", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Nuit \u00c9toil\u00e9e", "description": "Eau de Parfum pour femme", "brand": "Annick Goutal", "prices": [{"price": "133,11", "volume": "100 ml", "date": "2022-01-12"}, {"price": "133,11", "volume": "100 ml", "date": "2022-01-13"}, {"price": "134,42", "volume": "100 ml", "date": "2022-01-14"}, {"price": "133,11", "volume": "100 ml", "date": "2022-01-17"}, {"price": "133,11", "volume": "100 ml", "date": "2022-01-18"}, {"price": "133,11", "volume": "100 ml", "date": "2022-01-19"}, {"price": "133,11", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Eau du Sud", "description": "Eau de Toilette mixte", "brand": "Annick Goutal", "prices": [{"price": "104,87", "volume": "100 ml", "date": "2022-01-12"}, {"price": "104,87", "volume": "100 ml", "date": "2022-01-13"}, {"price": "104,87", "volume": "100 ml", "date": "2022-01-14"}, {"price": "104,87", "volume": "100 ml", "date": "2022-01-17"}, {"price": "104,87", "volume": "100 ml", "date": "2022-01-18"}, {"price": "104,87", "volume": "100 ml", "date": "2022-01-19"}, {"price": "104,87", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Eau de Charlotte", "description": "Eau de Toilette pour femme", "brand": "Annick Goutal", "prices": [{"price": "97,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "97,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "97,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "111,38", "volume": "100 ml", "date": "2022-01-17"}, {"price": "111,38", "volume": "100 ml", "date": "2022-01-18"}, {"price": "111,38", "volume": "100 ml", "date": "2022-01-19"}, {"price": "111,38", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "La Violette", "description": "Eau de Toilette pour femme", "brand": "Annick Goutal", "prices": [{"price": "100,24", "volume": "100 ml", "date": "2022-01-12"}, {"price": "100,24", "volume": "100 ml", "date": "2022-01-13"}, {"price": "100,24", "volume": "100 ml", "date": "2022-01-14"}, {"price": "100,24", "volume": "100 ml", "date": "2022-01-17"}, {"price": "100,24", "volume": "100 ml", "date": "2022-01-18"}, {"price": "100,24", "volume": "100 ml", "date": "2022-01-19"}, {"price": "100,24", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Cam\u00e9lia Intr\u00e9pide", "description": "parfum mixte", "brand": "Atelier Cologne", "prices": [{"price": "190,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Lemon Island", "description": "parfum mixte", "brand": "Atelier Cologne", "prices": [{"price": "150,00", "volume": "200 ml", "date": "2022-01-12"}, {"price": "150,00", "volume": "200 ml", "date": "2022-01-13"}, {"price": "150,00", "volume": "200 ml", "date": "2022-01-14"}, {"price": "150,00", "volume": "200 ml", "date": "2022-01-17"}, {"price": "150,00", "volume": "200 ml", "date": "2022-01-18"}, {"price": "150,00", "volume": "200 ml", "date": "2022-01-19"}, {"price": "150,00", "volume": "200 ml", "date": "2022-01-20"}]}, {"product_name": "Mojave Ghost", "description": "Eau de Parfum mixte", "brand": "Byredo", "prices": [{"price": "130,20", "volume": "50 ml", "date": "2022-01-12"}, {"price": "130,20", "volume": "50 ml", "date": "2022-01-13"}, {"price": "130,20", "volume": "50 ml", "date": "2022-01-14"}, {"price": "120,51", "volume": "50 ml", "date": "2022-01-17"}, {"price": "122,85", "volume": "50 ml", "date": "2022-01-18"}, {"price": "122,85", "volume": "50 ml", "date": "2022-01-19"}, {"price": "122,85", "volume": "50 ml", "date": "2022-01-20"}]}, {"product_name": "Palermo", "description": "Eau de Parfum pour femme", "brand": "Byredo", "prices": [{"price": "165,30", "volume": "100 ml", "date": "2022-01-12"}, {"price": "165,30", "volume": "100 ml", "date": "2022-01-13"}, {"price": "165,30", "volume": "100 ml", "date": "2022-01-14"}, {"price": "135,00", "volume": "50 ml", "date": "2022-01-17"}, {"price": "135,00", "volume": "50 ml", "date": "2022-01-18"}, {"price": "135,00", "volume": "50 ml", "date": "2022-01-19"}, {"price": "135,00", "volume": "50 ml", "date": "2022-01-20"}]}, {"product_name": "Black Saffron", "description": "Eau de Parfum mixte", "brand": "Byredo", "prices": [{"price": "165,30", "volume": "100 ml", "date": "2022-01-12"}, {"price": "165,30", "volume": "100 ml", "date": "2022-01-13"}, {"price": "165,30", "volume": "100 ml", "date": "2022-01-14"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Eleventh Hour", "description": "Eau de Parfum mixte", "brand": "Byredo", "prices": [{"price": "190,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Velvet Haze", "description": "Eau de Parfum mixte", "brand": "Byredo", "prices": [{"price": "193,80", "volume": "100 ml", "date": "2022-01-12"}, {"price": "193,80", "volume": "100 ml", "date": "2022-01-13"}, {"price": "193,80", "volume": "100 ml", "date": "2022-01-14"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "190,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Cap d'Antibes", "description": "Eau de Parfum pour homme", "brand": "Eight &amp; Bob", "prices": [{"price": "150,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "150,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "150,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "150,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "150,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "150,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "150,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Annicke 3", "description": "Eau de Parfum pour femme", "brand": "Eight &amp; Bob", "prices": [{"price": "160,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "160,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "160,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "160,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "160,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "160,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "160,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Molecule 01", "description": "Eau de Toilette mixte + Case", "brand": "Escentric Molecules", "prices": [{"price": "80,10", "volume": "100 ml", "date": "2022-01-12"}, {"price": "80,10", "volume": "100 ml", "date": "2022-01-13"}, {"price": "80,10", "volume": "100 ml", "date": "2022-01-14"}, {"price": "70,50", "volume": "100 ml", "date": "2022-01-17"}, {"price": "70,50", "volume": "100 ml", "date": "2022-01-18"}, {"price": "70,50", "volume": "100 ml", "date": "2022-01-19"}, {"price": "70,50", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Molecule 01 + Mandarin", "description": "Eau de Toilette mixte", "brand": "Escentric Molecules", "prices": [{"price": "80,10", "volume": "100 ml", "date": "2022-01-12"}, {"price": "80,10", "volume": "100 ml", "date": "2022-01-13"}, {"price": "80,10", "volume": "100 ml", "date": "2022-01-14"}, {"price": "70,50", "volume": "100 ml", "date": "2022-01-17"}, {"price": "70,50", "volume": "100 ml", "date": "2022-01-18"}, {"price": "70,50", "volume": "100 ml", "date": "2022-01-19"}, {"price": "70,50", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Cologne", "description": "Eau de Parfum mixte", "brand": "Etat Libre d\u2019Orange", "prices": [{"price": "78,20", "volume": "100 ml", "date": "2022-01-12"}, {"price": "78,20", "volume": "100 ml", "date": "2022-01-13"}, {"price": "78,20", "volume": "100 ml", "date": "2022-01-14"}, {"price": "81,37", "volume": "100 ml", "date": "2022-01-17"}, {"price": "81,37", "volume": "100 ml", "date": "2022-01-18"}, {"price": "81,37", "volume": "100 ml", "date": "2022-01-19"}, {"price": "81,37", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "(untitled)", "description": "Eau de Parfum mixte", "brand": "Maison Margiela", "prices": [{"price": "Product not available.", "date": "2022-01-13"}, {"price": "Product not available.", "date": "2022-01-14"}, {"price": "Product not available.", "date": "2022-01-17"}, {"price": "Product not available.", "date": "2022-01-18"}, {"price": "Product not available.", "date": "2022-01-19"}, {"price": "Product not available.", "date": "2022-01-20"}]}, {"product_name": "REPLICA Lazy Sunday Morning", "description": "Eau de Toilette pour femme", "brand": "Maison Margiela", "prices": [{"price": "95,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "95,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "95,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "85,90", "volume": "100 ml", "date": "2022-01-17"}, {"price": "85,90", "volume": "100 ml", "date": "2022-01-18"}, {"price": "85,90", "volume": "100 ml", "date": "2022-01-19"}, {"price": "85,90", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "REPLICA Under the Lemon Trees", "description": "Eau de Toilette mixte", "brand": "Maison Margiela", "prices": [{"price": "83,60", "volume": "100 ml", "date": "2022-01-12"}, {"price": "83,60", "volume": "100 ml", "date": "2022-01-13"}, {"price": "83,60", "volume": "100 ml", "date": "2022-01-14"}, {"price": "95,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "95,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "95,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "95,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "REPLICA When the Rain Stops", "description": "Eau de Toilette mixte", "brand": "Maison Margiela", "prices": [{"price": "105,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "105,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "105,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "105,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "105,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "105,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "105,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "REPLICA Whispers in the Library", "description": "Eau de Toilette mixte", "brand": "Maison Margiela", "prices": [{"price": "22,00", "volume": "10 ml", "date": "2022-01-12"}, {"price": "22,00", "volume": "10 ml", "date": "2022-01-13"}, {"price": "22,00", "volume": "10 ml", "date": "2022-01-14"}, {"price": "25,00", "volume": "10 ml", "date": "2022-01-17"}, {"price": "25,00", "volume": "10 ml", "date": "2022-01-18"}, {"price": "25,00", "volume": "10 ml", "date": "2022-01-19"}, {"price": "25,00", "volume": "10 ml", "date": "2022-01-20"}]}, {"product_name": "REPLICA Springtime in a Park", "description": "bougie parfum\u00e9e", "brand": "Maison Margiela", "prices": [{"price": "49,00", "volume": "30 ml", "date": "2022-01-12"}, {"price": "49,00", "volume": "30 ml", "date": "2022-01-13"}, {"price": "49,00", "volume": "30 ml", "date": "2022-01-14"}, {"price": "21,90", "volume": "10 ml", "date": "2022-01-17"}, {"price": "21,90", "volume": "10 ml", "date": "2022-01-18"}, {"price": "21,90", "volume": "10 ml", "date": "2022-01-19"}, {"price": "95,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Vento di Fiori", "description": "Eau de Toilette pour femme", "brand": "Bois 1920", "prices": [{"price": "157,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "157,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "157,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "157,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "157,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "157,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "157,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Verde di Mare", "description": "Eau de Parfum mixte", "brand": "Bois 1920", "prices": [{"price": "185,90", "volume": "100 ml", "date": "2022-01-12"}, {"price": "185,90", "volume": "100 ml", "date": "2022-01-13"}, {"price": "185,90", "volume": "100 ml", "date": "2022-01-14"}, {"price": "185,90", "volume": "100 ml", "date": "2022-01-17"}, {"price": "185,90", "volume": "100 ml", "date": "2022-01-18"}, {"price": "185,90", "volume": "100 ml", "date": "2022-01-19"}, {"price": "185,90", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Nagud", "description": "Eau de Parfum mixte", "brand": "Bois 1920", "prices": [{"price": "276,30", "volume": "100 ml", "date": "2022-01-12"}, {"price": "276,30", "volume": "100 ml", "date": "2022-01-13"}, {"price": "276,30", "volume": "100 ml", "date": "2022-01-14"}, {"price": "276,30", "volume": "100 ml", "date": "2022-01-17"}, {"price": "276,30", "volume": "100 ml", "date": "2022-01-18"}, {"price": "276,30", "volume": "100 ml", "date": "2022-01-19"}, {"price": "276,30", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Sushi Imperiale", "description": "Eau de Parfum mixte", "brand": "Bois 1920", "prices": [{"price": "161,71", "volume": "100 ml", "date": "2022-01-12"}, {"price": "161,71", "volume": "100 ml", "date": "2022-01-13"}, {"price": "161,71", "volume": "100 ml", "date": "2022-01-14"}, {"price": "157,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "157,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "157,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "157,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Pure Gold", "description": "Eau de Parfum pour femme", "brand": "Montale", "prices": [{"price": "99,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Dark Purple", "description": "Eau de Parfum pour femme", "brand": "Montale", "prices": [{"price": "99,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Sweet Peony", "description": "Eau de Parfum pour femme", "brand": "Montale", "prices": [{"price": "106,20", "volume": "100 ml", "date": "2022-01-12"}, {"price": "106,20", "volume": "100 ml", "date": "2022-01-13"}, {"price": "106,20", "volume": "100 ml", "date": "2022-01-14"}, {"price": "106,20", "volume": "100 ml", "date": "2022-01-17"}, {"price": "106,20", "volume": "100 ml", "date": "2022-01-18"}, {"price": "106,20", "volume": "100 ml", "date": "2022-01-19"}, {"price": "106,20", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Intense Cafe", "description": "Eau de Parfum mixte", "brand": "Montale", "prices": [{"price": "99,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Intense Cherry", "description": "Eau de Parfum mixte", "brand": "Montale", "prices": [{"price": "108,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Velvet Fantasy", "description": "Eau de Parfum mixte", "brand": "Montale", "prices": [{"price": "108,90", "volume": "100 ml", "date": "2022-01-12"}, {"price": "108,90", "volume": "100 ml", "date": "2022-01-13"}, {"price": "108,90", "volume": "100 ml", "date": "2022-01-14"}, {"price": "108,90", "volume": "100 ml", "date": "2022-01-17"}, {"price": "108,90", "volume": "100 ml", "date": "2022-01-18"}, {"price": "108,90", "volume": "100 ml", "date": "2022-01-19"}, {"price": "108,90", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Soleil De Capri", "description": "Eau de Parfum mixte", "brand": "Montale", "prices": [{"price": "81,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "81,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "81,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "81,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "81,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "81,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "81,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Mukhallat", "description": "Eau de Parfum mixte", "brand": "Montale", "prices": [{"price": "99,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Starry Nights", "description": "Eau de Parfum mixte", "brand": "Montale", "prices": [{"price": "108,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Intense Tiare", "description": "Eau de Parfum mixte", "brand": "Montale", "prices": [{"price": "81,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "81,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "81,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "81,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "81,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "81,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "81,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Vanilla Cake", "description": "Eau de Parfum mixte", "brand": "Montale", "prices": [{"price": "97,20", "volume": "100 ml", "date": "2022-01-12"}, {"price": "97,20", "volume": "100 ml", "date": "2022-01-13"}, {"price": "97,20", "volume": "100 ml", "date": "2022-01-14"}, {"price": "97,20", "volume": "100 ml", "date": "2022-01-17"}, {"price": "97,20", "volume": "100 ml", "date": "2022-01-18"}, {"price": "97,20", "volume": "100 ml", "date": "2022-01-19"}, {"price": "97,20", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Aoud Sense", "description": "Eau de Parfum mixte", "brand": "Montale", "prices": [{"price": "108,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "108,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Santal du Pacifuque", "description": "Eau de Parfum mixte", "brand": "Perris Monte Carlo", "prices": [{"price": "139,05", "volume": "100 ml", "date": "2022-01-12"}, {"price": "139,05", "volume": "100 ml", "date": "2022-01-13"}, {"price": "141,75", "volume": "100 ml", "date": "2022-01-14"}, {"price": "148,50", "volume": "100 ml", "date": "2022-01-17"}, {"price": "148,50", "volume": "100 ml", "date": "2022-01-18"}, {"price": "Product not available.", "date": "2022-01-19"}, {"price": "148,50", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Rose de Taif", "description": "Eau de Parfum mixte", "brand": "Perris Monte Carlo", "prices": [{"price": "135,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "135,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "135,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "135,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "135,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "135,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "135,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Bois d'Oud", "description": "Eau de Parfum mixte", "brand": "Perris Monte Carlo", "prices": [{"price": "148,50", "volume": "100 ml", "date": "2022-01-12"}, {"price": "148,50", "volume": "100 ml", "date": "2022-01-13"}, {"price": "148,50", "volume": "100 ml", "date": "2022-01-14"}, {"price": "Product not available.", "date": "2022-01-17"}, {"price": "Product not available.", "date": "2022-01-18"}, {"price": "Product not available.", "date": "2022-01-19"}, {"price": "135,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Les Infusions:  Infusion Amande", "description": "Eau de Parfum mixte", "brand": "Prada", "prices": [{"price": "93,10", "volume": "100 ml", "date": "2022-01-12"}, {"price": "93,10", "volume": "100 ml", "date": "2022-01-13"}, {"price": "93,10", "volume": "100 ml", "date": "2022-01-14"}, {"price": "105,22", "volume": "100 ml", "date": "2022-01-17"}, {"price": "102,73", "volume": "100 ml", "date": "2022-01-18"}, {"price": "102,15", "volume": "100 ml", "date": "2022-01-19"}, {"price": "104,90", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Une Nuit Magnetique", "description": "Eau de Parfum mixte", "brand": "The Different Company", "prices": [{"price": "70,40", "volume": "50 ml", "date": "2022-01-12"}, {"price": "70,40", "volume": "50 ml", "date": "2022-01-13"}, {"price": "70,40", "volume": "50 ml", "date": "2022-01-14"}, {"price": "80,75", "volume": "50 ml", "date": "2022-01-17"}, {"price": "80,75", "volume": "50 ml", "date": "2022-01-18"}, {"price": "80,75", "volume": "50 ml", "date": "2022-01-19"}, {"price": "80,75", "volume": "50 ml", "date": "2022-01-20"}]}, {"product_name": "Pure eVe", "description": "Eau de Parfum rechargeable pour femme", "brand": "The Different Company", "prices": [{"price": "145,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "145,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "145,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "155,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "155,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "155,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "155,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Sublime Balkiss", "description": "Eau de Parfum rechargeable pour femme", "brand": "The Different Company", "prices": [{"price": "156,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "156,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "156,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "156,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "156,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "156,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "156,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Majaina", "description": "Eau de Parfum mixte", "brand": "The Different Company", "prices": [{"price": "177,30", "volume": "100 ml", "date": "2022-01-12"}, {"price": "177,30", "volume": "100 ml", "date": "2022-01-13"}, {"price": "177,30", "volume": "100 ml", "date": "2022-01-14"}, {"price": "177,30", "volume": "100 ml", "date": "2022-01-17"}, {"price": "177,30", "volume": "100 ml", "date": "2022-01-18"}, {"price": "177,30", "volume": "100 ml", "date": "2022-01-19"}, {"price": "177,30", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Oriental Lounge", "description": "Eau de Parfum mixte", "brand": "The Different Company", "prices": [{"price": "85,08", "volume": "50 ml", "date": "2022-01-12"}, {"price": "85,08", "volume": "50 ml", "date": "2022-01-13"}, {"price": "85,08", "volume": "50 ml", "date": "2022-01-14"}, {"price": "85,08", "volume": "50 ml", "date": "2022-01-17"}, {"price": "85,08", "volume": "50 ml", "date": "2022-01-18"}, {"price": "85,08", "volume": "50 ml", "date": "2022-01-19"}, {"price": "85,08", "volume": "50 ml", "date": "2022-01-20"}]}, {"product_name": "Sel de Vetiver", "description": "Eau de Parfum mixte", "brand": "The Different Company", "prices": [{"price": "98,31", "volume": "100 ml", "date": "2022-01-12"}, {"price": "98,31", "volume": "100 ml", "date": "2022-01-13"}, {"price": "98,31", "volume": "100 ml", "date": "2022-01-14"}, {"price": "86,60", "volume": "100 ml", "date": "2022-01-17"}, {"price": "86,60", "volume": "100 ml", "date": "2022-01-18"}, {"price": "86,60", "volume": "100 ml", "date": "2022-01-19"}, {"price": "86,60", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Osmanthus", "description": "Eau de Toilette pour femme", "brand": "The Different Company", "prices": [{"price": "73,15", "volume": "50 ml", "date": "2022-01-12"}, {"price": "73,15", "volume": "50 ml", "date": "2022-01-13"}, {"price": "73,11", "volume": "50 ml", "date": "2022-01-14"}, {"price": "73,11", "volume": "50 ml", "date": "2022-01-17"}, {"price": "73,11", "volume": "50 ml", "date": "2022-01-18"}, {"price": "72,95", "volume": "50 ml", "date": "2022-01-19"}, {"price": "72,95", "volume": "50 ml", "date": "2022-01-20"}]}, {"product_name": "Bergamote", "description": "Eau de Toilette rechargeable pour femme", "brand": "The Different Company", "prices": [{"price": "101,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "98,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "98,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "98,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "98,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "98,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "99,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Tokyo Bloom", "description": "Eau de Toilette rechargeable mixte", "brand": "The Different Company", "prices": [{"price": "96,00", "volume": "100 ml", "date": "2022-01-12"}, {"price": "96,00", "volume": "100 ml", "date": "2022-01-13"}, {"price": "96,00", "volume": "100 ml", "date": "2022-01-14"}, {"price": "96,00", "volume": "100 ml", "date": "2022-01-17"}, {"price": "96,00", "volume": "100 ml", "date": "2022-01-18"}, {"price": "96,00", "volume": "100 ml", "date": "2022-01-19"}, {"price": "97,00", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Cologne Take Me Out", "description": "Eau de Toilette mixte", "brand": "Mugler", "prices": [{"price": "37,26", "volume": "100 ml", "date": "2022-01-12"}, {"price": "46,35", "volume": "100 ml", "date": "2022-01-13"}, {"price": "46,35", "volume": "100 ml", "date": "2022-01-14"}, {"price": "46,35", "volume": "100 ml", "date": "2022-01-17"}, {"price": "46,35", "volume": "100 ml", "date": "2022-01-18"}, {"price": "46,35", "volume": "100 ml", "date": "2022-01-19"}, {"price": "46,35", "volume": "100 ml", "date": "2022-01-20"}]}, {"product_name": "Icon Collection 90 Pure White", "description": "Eau de Parfum mixte", "brand": "Banana Republic", "prices": [{"price": "28,20", "volume": "75 ml", "date": "2022-01-12"}, {"price": "28,20", "volume": "75 ml", "date": "2022-01-13"}, {"price": "28,20", "volume": "75 ml", "date": "2022-01-14"}, {"price": "28,20", "volume": "75 ml", "date": "2022-01-17"}, {"price": "28,20", "volume": "75 ml", "date": "2022-01-18"}, {"price": "28,20", "volume": "75 ml", "date": "2022-01-19"}, {"price": "28,20", "volume": "75 ml", "date": "2022-01-20"}]}]
+[
+  {
+    "product_name": "Moustache",
+    "description": "Eau de Toilette pour homme",
+    "brand": "Rochas",
+    "prices": [
+      {
+        "price": "26,00",
+        "volume": "125 ml",
+        "date": "2021-12-30"
+      },
+      {
+        "price": "26,00",
+        "volume": "125 ml",
+        "date": "2021-12-31"
+      },
+      {
+        "price": "26,00",
+        "volume": "125 ml",
+        "date": "2022-01-01"
+      },
+      {
+        "price": "26,00",
+        "volume": "125 ml",
+        "date": "2022-01-03"
+      },
+      {
+        "price": "29,93",
+        "volume": "125 ml",
+        "date": "2022-01-05"
+      },
+      {
+        "price": "29,93",
+        "volume": "125 ml",
+        "date": "2022-01-06"
+      },
+      {
+        "price": "29,93",
+        "volume": "125 ml",
+        "date": "2022-01-07"
+      },
+      {
+        "price": "31,35",
+        "volume": "125 ml",
+        "date": "2022-01-09"
+      },
+      {
+        "price": "31,35",
+        "volume": "125 ml",
+        "date": "2022-01-11"
+      },
+      {
+        "volume": "125 ml",
+        "price": "31,35",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "31,35",
+        "volume": "125 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "32,85",
+        "volume": "75 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "29,00",
+        "volume": "75 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "29,00",
+        "volume": "75 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "29,00",
+        "volume": "75 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "29,00",
+        "volume": "75 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Moscow Mule",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Juliette has a gun",
+    "prices": [
+      {
+        "price": "71,50",
+        "volume": "100 ml",
+        "date": "2021-12-30"
+      },
+      {
+        "price": "71,50",
+        "volume": "100 ml",
+        "date": "2021-12-31"
+      },
+      {
+        "price": "71,50",
+        "volume": "100 ml",
+        "date": "2022-01-01"
+      },
+      {
+        "price": "71,50",
+        "volume": "100 ml",
+        "date": "2022-01-03"
+      },
+      {
+        "price": "71,50",
+        "volume": "100 ml",
+        "date": "2022-01-05"
+      },
+      {
+        "price": "71,50",
+        "volume": "100 ml",
+        "date": "2022-01-06"
+      },
+      {
+        "price": "71,50",
+        "volume": "100 ml",
+        "date": "2022-01-07"
+      },
+      {
+        "price": "71,50",
+        "volume": "100 ml",
+        "date": "2022-01-09"
+      },
+      {
+        "price": "71,50",
+        "volume": "100 ml",
+        "date": "2022-01-11"
+      },
+      {
+        "volume": "100 ml",
+        "price": "71,50",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "71,50",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "71,50",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "64,50",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "65,79",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "65,79",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "65,79",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Not a Perfume Superdose",
+    "description": "Eau de Parfum mixte",
+    "brand": "Juliette has a gun",
+    "prices": [
+      {
+        "price": "86,00",
+        "volume": "100 ml",
+        "date": "2021-12-30"
+      },
+      {
+        "price": "93,50",
+        "volume": "100 ml",
+        "date": "2021-12-31"
+      },
+      {
+        "price": "84,40",
+        "volume": "100 ml",
+        "date": "2022-01-01"
+      },
+      {
+        "price": "84,40",
+        "volume": "100 ml",
+        "date": "2022-01-03"
+      },
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-05"
+      },
+      {
+        "price": "84,40",
+        "volume": "100 ml",
+        "date": "2022-01-06"
+      },
+      {
+        "price": "84,40",
+        "volume": "100 ml",
+        "date": "2022-01-07"
+      },
+      {
+        "price": "84,40",
+        "volume": "100 ml",
+        "date": "2022-01-09"
+      },
+      {
+        "price": "84,40",
+        "volume": "100 ml",
+        "date": "2022-01-11"
+      },
+      {
+        "volume": "100 ml",
+        "price": "84,40",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "84,40",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "84,40",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "74,30",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "74,30",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "74,30",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "74,30",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Eau d\u2019Hadrien",
+    "description": "Eau de Parfum pour homme",
+    "brand": "Annick Goutal",
+    "prices": [
+      {
+        "price": "91,50",
+        "volume": "100 ml",
+        "date": "2021-12-31"
+      },
+      {
+        "price": "91,50",
+        "volume": "100 ml",
+        "date": "2022-01-01"
+      },
+      {
+        "price": "91,50",
+        "volume": "100 ml",
+        "date": "2022-01-03"
+      },
+      {
+        "price": "91,50",
+        "volume": "100 ml",
+        "date": "2022-01-05"
+      },
+      {
+        "price": "91,50",
+        "volume": "100 ml",
+        "date": "2022-01-06"
+      },
+      {
+        "price": "91,50",
+        "volume": "100 ml",
+        "date": "2022-01-07"
+      },
+      {
+        "price": "91,50",
+        "volume": "100 ml",
+        "date": "2022-01-09"
+      },
+      {
+        "price": "91,50",
+        "volume": "100 ml",
+        "date": "2022-01-11"
+      },
+      {
+        "volume": "100 ml",
+        "price": "91,50",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "91,50",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "91,50",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "93,90",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "93,90",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "93,90",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "93,90",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Tom of Finland",
+    "description": "Eau de Parfum pour homme",
+    "brand": "Etat Libre d\u2019Orange",
+    "prices": [
+      {
+        "price": "84,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "84,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "90,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "90,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "90,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "90,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "90,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Hermann a Mes Cotes Me Paraissait Une Ombre",
+    "description": "Eau de Parfum mixte",
+    "brand": "Etat Libre d\u2019Orange",
+    "prices": [
+      {
+        "price": "73,10",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "73,10",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "73,10",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "86,90",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "86,90",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "86,90",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "86,90",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Yes I Do",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Etat Libre d\u2019Orange",
+    "prices": [
+      {
+        "price": "58,00",
+        "volume": "50 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "58,00",
+        "volume": "50 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "58,00",
+        "volume": "50 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "58,00",
+        "volume": "50 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "58,00",
+        "volume": "50 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "58,00",
+        "volume": "50 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "58,00",
+        "volume": "50 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Like This",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Etat Libre d\u2019Orange",
+    "prices": [
+      {
+        "price": "114,40",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "114,40",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "119,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "119,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "120,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "120,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "120,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Vanilla Vibes",
+    "description": "Eau de Parfum mixte",
+    "brand": "Juliette has a gun",
+    "prices": [
+      {
+        "price": "69,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "69,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "69,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "82,90",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "82,90",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "82,90",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "82,90",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Les Infusions:  Infusion Iris",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Prada",
+    "prices": [
+      {
+        "price": "131,00",
+        "volume": "200 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "131,00",
+        "volume": "200 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "131,00",
+        "volume": "200 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "131,00",
+        "volume": "200 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "131,00",
+        "volume": "200 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "131,00",
+        "volume": "200 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "131,00",
+        "volume": "200 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "La Tulipe",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Byredo",
+    "prices": [
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Ylang Ylang Nosy Be",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Perris Monte Carlo",
+    "prices": [
+      {
+        "price": "135,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "135,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "135,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "136,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "136,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "136,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "136,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Petite Ch\u00e9rie",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Annick Goutal",
+    "prices": [
+      {
+        "price": "117,18",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "117,18",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "117,18",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "103,20",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "103,20",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "103,20",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "103,20",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Songes",
+    "description": "",
+    "brand": "Annick Goutal",
+    "prices": [
+      {
+        "price": "121,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "121,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "121,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "145,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "145,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "145,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "145,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Grand Amour",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Annick Goutal",
+    "prices": [
+      {
+        "price": "101,51",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "101,51",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "101,51",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "89,40",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "89,40",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "89,40",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "89,40",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Nuit \u00c9toil\u00e9e",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Annick Goutal",
+    "prices": [
+      {
+        "price": "133,11",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "133,11",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "134,42",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "133,11",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "133,11",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "133,11",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "133,11",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Eau du Sud",
+    "description": "Eau de Toilette mixte",
+    "brand": "Annick Goutal",
+    "prices": [
+      {
+        "price": "104,87",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "104,87",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "104,87",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "104,87",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "104,87",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "104,87",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "104,87",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Eau de Charlotte",
+    "description": "Eau de Toilette pour femme",
+    "brand": "Annick Goutal",
+    "prices": [
+      {
+        "price": "97,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "97,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "97,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "111,38",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "111,38",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "111,38",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "111,38",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "La Violette",
+    "description": "Eau de Toilette pour femme",
+    "brand": "Annick Goutal",
+    "prices": [
+      {
+        "price": "100,24",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "100,24",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "100,24",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "100,24",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "100,24",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "100,24",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "100,24",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Cam\u00e9lia Intr\u00e9pide",
+    "description": "parfum mixte",
+    "brand": "Atelier Cologne",
+    "prices": [
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Lemon Island",
+    "description": "parfum mixte",
+    "brand": "Atelier Cologne",
+    "prices": [
+      {
+        "price": "150,00",
+        "volume": "200 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "150,00",
+        "volume": "200 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "150,00",
+        "volume": "200 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "150,00",
+        "volume": "200 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "150,00",
+        "volume": "200 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "150,00",
+        "volume": "200 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "150,00",
+        "volume": "200 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Mojave Ghost",
+    "description": "Eau de Parfum mixte",
+    "brand": "Byredo",
+    "prices": [
+      {
+        "price": "130,20",
+        "volume": "50 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "130,20",
+        "volume": "50 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "130,20",
+        "volume": "50 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "120,51",
+        "volume": "50 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "122,85",
+        "volume": "50 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "122,85",
+        "volume": "50 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "122,85",
+        "volume": "50 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Palermo",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Byredo",
+    "prices": [
+      {
+        "price": "165,30",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "165,30",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "165,30",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "135,00",
+        "volume": "50 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "135,00",
+        "volume": "50 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "135,00",
+        "volume": "50 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "135,00",
+        "volume": "50 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Black Saffron",
+    "description": "Eau de Parfum mixte",
+    "brand": "Byredo",
+    "prices": [
+      {
+        "price": "165,30",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "165,30",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "165,30",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Eleventh Hour",
+    "description": "Eau de Parfum mixte",
+    "brand": "Byredo",
+    "prices": [
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Velvet Haze",
+    "description": "Eau de Parfum mixte",
+    "brand": "Byredo",
+    "prices": [
+      {
+        "price": "193,80",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "193,80",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "193,80",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "190,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Cap d'Antibes",
+    "description": "Eau de Parfum pour homme",
+    "brand": "Eight &amp; Bob",
+    "prices": [
+      {
+        "price": "150,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "150,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "150,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "150,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "150,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "150,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "150,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Annicke 3",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Eight &amp; Bob",
+    "prices": [
+      {
+        "price": "160,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "160,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "160,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "160,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "160,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "160,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "160,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Molecule 01",
+    "description": "Eau de Toilette mixte + Case",
+    "brand": "Escentric Molecules",
+    "prices": [
+      {
+        "price": "80,10",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "80,10",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "80,10",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "70,50",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "70,50",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "70,50",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "70,50",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Molecule 01 + Mandarin",
+    "description": "Eau de Toilette mixte",
+    "brand": "Escentric Molecules",
+    "prices": [
+      {
+        "price": "80,10",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "80,10",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "80,10",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "70,50",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "70,50",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "70,50",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "70,50",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Cologne",
+    "description": "Eau de Parfum mixte",
+    "brand": "Etat Libre d\u2019Orange",
+    "prices": [
+      {
+        "price": "78,20",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "78,20",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "78,20",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "81,37",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "81,37",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "81,37",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "81,37",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "(untitled)",
+    "description": "Eau de Parfum mixte",
+    "brand": "Maison Margiela",
+    "prices": [
+      {
+        "price": "Product not available.",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "Product not available.",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "Product not available.",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "Product not available.",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "Product not available.",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "Product not available.",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "REPLICA Lazy Sunday Morning",
+    "description": "Eau de Toilette pour femme",
+    "brand": "Maison Margiela",
+    "prices": [
+      {
+        "price": "95,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "95,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "95,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "85,90",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "85,90",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "85,90",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "85,90",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "REPLICA Under the Lemon Trees",
+    "description": "Eau de Toilette mixte",
+    "brand": "Maison Margiela",
+    "prices": [
+      {
+        "price": "83,60",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "83,60",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "83,60",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "95,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "95,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "95,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "95,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "REPLICA When the Rain Stops",
+    "description": "Eau de Toilette mixte",
+    "brand": "Maison Margiela",
+    "prices": [
+      {
+        "price": "105,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "105,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "105,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "105,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "105,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "105,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "105,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "REPLICA Whispers in the Library",
+    "description": "Eau de Toilette mixte",
+    "brand": "Maison Margiela",
+    "prices": [
+      {
+        "price": "22,00",
+        "volume": "10 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "22,00",
+        "volume": "10 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "22,00",
+        "volume": "10 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "25,00",
+        "volume": "10 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "25,00",
+        "volume": "10 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "25,00",
+        "volume": "10 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "25,00",
+        "volume": "10 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "REPLICA Springtime in a Park",
+    "description": "bougie parfum\u00e9e",
+    "brand": "Maison Margiela",
+    "prices": [
+      {
+        "price": "49,00",
+        "volume": "30 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "49,00",
+        "volume": "30 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "49,00",
+        "volume": "30 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "21,90",
+        "volume": "10 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "21,90",
+        "volume": "10 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "21,90",
+        "volume": "10 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "95,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Vento di Fiori",
+    "description": "Eau de Toilette pour femme",
+    "brand": "Bois 1920",
+    "prices": [
+      {
+        "price": "157,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "157,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "157,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "157,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "157,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "157,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "157,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Verde di Mare",
+    "description": "Eau de Parfum mixte",
+    "brand": "Bois 1920",
+    "prices": [
+      {
+        "price": "185,90",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "185,90",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "185,90",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "185,90",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "185,90",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "185,90",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "185,90",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Nagud",
+    "description": "Eau de Parfum mixte",
+    "brand": "Bois 1920",
+    "prices": [
+      {
+        "price": "276,30",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "276,30",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "276,30",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "276,30",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "276,30",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "276,30",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "276,30",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Sushi Imperiale",
+    "description": "Eau de Parfum mixte",
+    "brand": "Bois 1920",
+    "prices": [
+      {
+        "price": "161,71",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "161,71",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "161,71",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "157,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "157,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "157,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "157,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Pure Gold",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Montale",
+    "prices": [
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Dark Purple",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Montale",
+    "prices": [
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Sweet Peony",
+    "description": "Eau de Parfum pour femme",
+    "brand": "Montale",
+    "prices": [
+      {
+        "price": "106,20",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "106,20",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "106,20",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "106,20",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "106,20",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "106,20",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "106,20",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Intense Cafe",
+    "description": "Eau de Parfum mixte",
+    "brand": "Montale",
+    "prices": [
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Intense Cherry",
+    "description": "Eau de Parfum mixte",
+    "brand": "Montale",
+    "prices": [
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Velvet Fantasy",
+    "description": "Eau de Parfum mixte",
+    "brand": "Montale",
+    "prices": [
+      {
+        "price": "108,90",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "108,90",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "108,90",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "108,90",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "108,90",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "108,90",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "108,90",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Soleil De Capri",
+    "description": "Eau de Parfum mixte",
+    "brand": "Montale",
+    "prices": [
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Mukhallat",
+    "description": "Eau de Parfum mixte",
+    "brand": "Montale",
+    "prices": [
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Starry Nights",
+    "description": "Eau de Parfum mixte",
+    "brand": "Montale",
+    "prices": [
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Intense Tiare",
+    "description": "Eau de Parfum mixte",
+    "brand": "Montale",
+    "prices": [
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "81,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Vanilla Cake",
+    "description": "Eau de Parfum mixte",
+    "brand": "Montale",
+    "prices": [
+      {
+        "price": "97,20",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "97,20",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "97,20",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "97,20",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "97,20",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "97,20",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "97,20",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Aoud Sense",
+    "description": "Eau de Parfum mixte",
+    "brand": "Montale",
+    "prices": [
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "108,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Santal du Pacifuque",
+    "description": "Eau de Parfum mixte",
+    "brand": "Perris Monte Carlo",
+    "prices": [
+      {
+        "price": "139,05",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "139,05",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "141,75",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "148,50",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "148,50",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "Product not available.",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "148,50",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Rose de Taif",
+    "description": "Eau de Parfum mixte",
+    "brand": "Perris Monte Carlo",
+    "prices": [
+      {
+        "price": "135,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "135,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "135,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "135,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "135,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "135,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "135,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Bois d'Oud",
+    "description": "Eau de Parfum mixte",
+    "brand": "Perris Monte Carlo",
+    "prices": [
+      {
+        "price": "148,50",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "148,50",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "148,50",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "Product not available.",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "Product not available.",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "Product not available.",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "135,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Les Infusions:  Infusion Amande",
+    "description": "Eau de Parfum mixte",
+    "brand": "Prada",
+    "prices": [
+      {
+        "price": "93,10",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "93,10",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "93,10",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "105,22",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "102,73",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "102,15",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "104,90",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Une Nuit Magnetique",
+    "description": "Eau de Parfum mixte",
+    "brand": "The Different Company",
+    "prices": [
+      {
+        "price": "70,40",
+        "volume": "50 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "70,40",
+        "volume": "50 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "70,40",
+        "volume": "50 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "80,75",
+        "volume": "50 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "80,75",
+        "volume": "50 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "80,75",
+        "volume": "50 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "80,75",
+        "volume": "50 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Pure eVe",
+    "description": "Eau de Parfum rechargeable pour femme",
+    "brand": "The Different Company",
+    "prices": [
+      {
+        "price": "145,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "145,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "145,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "155,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "155,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "155,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "155,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Sublime Balkiss",
+    "description": "Eau de Parfum rechargeable pour femme",
+    "brand": "The Different Company",
+    "prices": [
+      {
+        "price": "156,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "156,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "156,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "156,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "156,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "156,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "156,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Majaina",
+    "description": "Eau de Parfum mixte",
+    "brand": "The Different Company",
+    "prices": [
+      {
+        "price": "177,30",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "177,30",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "177,30",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "177,30",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "177,30",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "177,30",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "177,30",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Oriental Lounge",
+    "description": "Eau de Parfum mixte",
+    "brand": "The Different Company",
+    "prices": [
+      {
+        "price": "85,08",
+        "volume": "50 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "85,08",
+        "volume": "50 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "85,08",
+        "volume": "50 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "85,08",
+        "volume": "50 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "85,08",
+        "volume": "50 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "85,08",
+        "volume": "50 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "85,08",
+        "volume": "50 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Sel de Vetiver",
+    "description": "Eau de Parfum mixte",
+    "brand": "The Different Company",
+    "prices": [
+      {
+        "price": "98,31",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "98,31",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "98,31",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "86,60",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "86,60",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "86,60",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "86,60",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Osmanthus",
+    "description": "Eau de Toilette pour femme",
+    "brand": "The Different Company",
+    "prices": [
+      {
+        "price": "73,15",
+        "volume": "50 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "73,15",
+        "volume": "50 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "73,11",
+        "volume": "50 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "73,11",
+        "volume": "50 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "73,11",
+        "volume": "50 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "72,95",
+        "volume": "50 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "72,95",
+        "volume": "50 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Bergamote",
+    "description": "Eau de Toilette rechargeable pour femme",
+    "brand": "The Different Company",
+    "prices": [
+      {
+        "price": "101,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "98,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "98,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "98,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "98,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "98,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "99,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Tokyo Bloom",
+    "description": "Eau de Toilette rechargeable mixte",
+    "brand": "The Different Company",
+    "prices": [
+      {
+        "price": "96,00",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "96,00",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "96,00",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "96,00",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "96,00",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "96,00",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "97,00",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Cologne Take Me Out",
+    "description": "Eau de Toilette mixte",
+    "brand": "Mugler",
+    "prices": [
+      {
+        "price": "37,26",
+        "volume": "100 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "46,35",
+        "volume": "100 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "46,35",
+        "volume": "100 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "46,35",
+        "volume": "100 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "46,35",
+        "volume": "100 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "46,35",
+        "volume": "100 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "46,35",
+        "volume": "100 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  },
+  {
+    "product_name": "Icon Collection 90 Pure White",
+    "description": "Eau de Parfum mixte",
+    "brand": "Banana Republic",
+    "prices": [
+      {
+        "price": "28,20",
+        "volume": "75 ml",
+        "date": "2022-01-12"
+      },
+      {
+        "price": "28,20",
+        "volume": "75 ml",
+        "date": "2022-01-13"
+      },
+      {
+        "price": "28,20",
+        "volume": "75 ml",
+        "date": "2022-01-14"
+      },
+      {
+        "price": "28,20",
+        "volume": "75 ml",
+        "date": "2022-01-17"
+      },
+      {
+        "price": "28,20",
+        "volume": "75 ml",
+        "date": "2022-01-18"
+      },
+      {
+        "price": "28,20",
+        "volume": "75 ml",
+        "date": "2022-01-19"
+      },
+      {
+        "price": "28,20",
+        "volume": "75 ml",
+        "date": "2022-01-20"
+      }
+    ]
+  }
+]
