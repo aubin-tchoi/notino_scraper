@@ -5,11 +5,12 @@ from typing import DefaultDict, List, Tuple
 
 import matplotlib.pyplot as plt
 import seaborn as sns
-from notino_scraper.product import Product
-from notino_scraper.product_list import ProductList
-from notino_scraper.scraper import Scraper
-from notino_scraper.product_not_found import ProductNotFoundException
 from yaml import safe_load, dump, YAMLError
+
+from .scraper import Scraper
+from .product import Product
+from .product_list import ProductList
+from .product_not_found import ProductNotFoundException
 
 
 class NotinoScraper:

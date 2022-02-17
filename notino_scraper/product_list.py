@@ -1,6 +1,7 @@
 import json
-from notino_scraper.product import Product
 import traceback
+
+from .product import Product
 
 
 class ProductList:

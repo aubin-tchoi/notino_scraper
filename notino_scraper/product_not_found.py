@@ -1,5 +1,3 @@
-
-
 class ProductNotFoundException(Exception):
 
     def __init__(self, product: str, message: str = "Product not found.") -> None:
