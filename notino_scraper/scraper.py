@@ -1,18 +1,18 @@
-from selenium import webdriver
-from selenium.webdriver.firefox.webdriver import WebDriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
-
-from selenium.common.exceptions import InvalidArgumentException
-from selenium.common.exceptions import StaleElementReferenceException
-from selenium.common.exceptions import InvalidSelectorException
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import TimeoutException
-
-from typing import Callable
 import datetime
-import nltk
 import traceback
+from typing import Callable
+
+import nltk
+from selenium import webdriver
+from selenium.common.exceptions import InvalidArgumentException, InvalidSelectorException
+from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.firefox.webdriver import WebDriver
+from selenium.webdriver.remote.webelement import WebElement
+from selenium.webdriver.support.ui import WebDriverWait
+
+from .product_not_found import ProductNotFoundException
 
 
 class Scraper:
@@ -145,6 +145,14 @@ class Scraper:
 
         return _predicate
 
+    def get_first_suggestion(self) -> WebElement:
+        """
+        Finds the first suggestion in the suggestion section.
+        :return: The WebElement that points at the first item in the column of suggestions.
+        """
+        return self.web_driver.find_element(
+            value="header-suggestSectionCol").find_elements(By.TAG_NAME, "a")[0]
+
     def fetch_product_info(self, product_name: str, *features: str) -> dict:
         """
         Extracts a list of information on a product.
@@ -161,12 +169,18 @@ class Scraper:
                                 .find_elements(By.CSS_SELECTOR, "a[id='header-productWrapper']")[0]
                                 .get_attribute("href"))
         except TimeoutException:
-            self.web_driver.get(self.web_driver.find_element(value="header-suggestSectionCol")
-                                .find_elements(By.TAG_NAME, "a")[0]
-                                .get_attribute("href"))
-            self.web_driver.get(self.web_driver.find_element(value="productsList")
-                                .find_element(By.TAG_NAME, "a")
-                                .get_attribute("href"))
+            try:
+                suggestion = self.get_first_suggestion()
+                if self.result_match(suggestion.get_attribute("innerHTML"), product_name):
+                    self.web_driver.get(suggestion.get_attribute("href"))
+                else:
+                    raise ProductNotFoundException(product_name)
+            except TimeoutException:
+                searchBar.send_keys(Keys.ENTER)
+                WebDriverWait(self.web_driver, 3).until(lambda x: x.find_element(value="productsList"))
+                self.web_driver.get(self.web_driver.find_element(value="productsList")
+                                    .find_element(By.TAG_NAME, "a")
+                                    .get_attribute("href"))
 
         feature_readers, fetched_info = self.set_info_list(), {}
 
