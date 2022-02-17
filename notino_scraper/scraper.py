@@ -152,7 +152,7 @@ class Scraper:
         :param features: The features to extract. By default, all of them will be extracted.
         :return: A dictionary containing the extracted information.
         """
-        searchBar = self.web_driver.find_element(By.CSS_SELECTOR, "div[id='pageHeader'] input")
+        searchBar = self.web_driver.find_element(By.CSS_SELECTOR, "[id='pageHeader'] input")
         searchBar.send_keys(product_name)
 
         try:
