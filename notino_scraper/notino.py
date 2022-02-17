@@ -1,12 +1,15 @@
-from notino_scraper.scraper import Scraper
-from notino_scraper.product_list import ProductList
-from notino_scraper.product import Product
-from yaml import safe_load, dump, YAMLError
-
-import seaborn as sns
-import matplotlib.pyplot as plt
+import datetime
 import os
 from collections import defaultdict
+from typing import DefaultDict, List, Tuple
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+from notino_scraper.product import Product
+from notino_scraper.product_list import ProductList
+from notino_scraper.scraper import Scraper
+from notino_scraper.product_not_found import ProductNotFoundException
+from yaml import safe_load, dump, YAMLError
 
 
 class NotinoScraper:
@@ -70,14 +73,6 @@ class NotinoScraper:
         NotinoScraper.update_config("img_folder", new_folder)
 
     @staticmethod
-    def update_products_per_plot(products_per_plot: str) -> None:
-        """
-        Updates the value associated with key "products_per_plot" in the yaml config file.
-        :param products_per_plot: The value to replace with.
-        """
-        NotinoScraper.update_config("products_per_plot", products_per_plot)
-
-    @staticmethod
     def set_config_parameters() -> None:
         """
         Sets every existing parameter in the configuration by asking for user input on each of them.
@@ -88,9 +83,7 @@ class NotinoScraper:
             'datafile': (f"Please specify the path to the output json file {enter}",
                          NotinoScraper.update_datafile),
             'img_folder': (f"Please specify the folder in which the images will be stored {enter}",
-                           NotinoScraper.update_img_folder),
-            'products_per_plot': (f"Please specify how many products should be displayed on each graph {enter}",
-                                  NotinoScraper.update_products_per_plot)
+                           NotinoScraper.update_img_folder)
         }
         for parameter in config_parameters:
             # Asking for user input again and again until a correct value is provided or the default value is kept.
@@ -111,7 +104,11 @@ class NotinoScraper:
         for product in self.product_list.get_products():
             if self.verbose:
                 print(f"Adding the price of: {product.get_search_name()}")
-            product.add_prices(self.scraper.get_prices(product.get_search_name()))
+            try:
+                product.add_prices(self.scraper.get_prices(product.get_search_name()))
+            except ProductNotFoundException:
+                if self.verbose:
+                    print(f"Prices not found for: {product.get_search_name()}")
         self.product_list.save()
         if self.verbose:
             print(self.product_list)
@@ -136,37 +133,35 @@ class NotinoScraper:
                 with open(self.config_file, 'r') as stream:
                     config = safe_load(stream)
                 img_folder = config["img_folder"]
-                products_per_plot = int(config["products_per_plot"])
                 break
             except KeyError as e:
                 if e.args[0] == "img_folder":
                     self.update_img_folder(input("Please specify the folder in which the images will be stored: "))
-                elif e.args[0] == "products_per_plot":
-                    self.update_products_per_plot("5")
 
-        plt.figure()
         sns.set(color_codes=True)
-        product_count, image_count = 0, 0
 
         for product in self.product_list.products:
             # There can be different sizes for the same product.
-            plots = defaultdict(list)
+            plots: DefaultDict[str, DefaultDict[str, List[Tuple[datetime.date, float]]]] = defaultdict(
+                lambda: defaultdict(list))
             for price in product.prices:
-                if price != "Info not found." and price['price'] != "Product not available.":
-                    plots[f"{product.get_search_name()} {price['volume']}"].append((price['date'], price['price']))
-            for key in plots:
-                plt.plot([t[0] for t in plots[key]], [t[1] for t in plots[key]], label=key)
-                product_count += 1
-                if product_count >= products_per_plot:
-                    product_count, image_count = 0, image_count + 1
+                if price != "Info not found." and price['price'] != "Product not available." and price[
+                        'price'] != "Price not found.":
+                    plots[f"{product.get_search_name()}"][f"{price['volume']}"].append(
+                        (datetime.date.fromisoformat(price['date']), float(price['price'].replace(',', '.'))))
+            for product_name in plots:
+                # Removing the products that have too few prices recorded.
+                if sum(len(p) for p in plots[product_name].values()) > 10:
+                    plt.figure(clear=True, figsize=(14, 14))
+                    for volume in plots[product_name]:
+                        plt.plot([t[0] for t in plots[product_name][volume]],
+                                 [t[1] for t in plots[product_name][volume]],
+                                 label=f"{product_name} {volume}")
                     plt.legend()
-                    plt.savefig(os.path.join(img_folder, f"prices_{image_count}"))
-                    plt.figure()
-
-        # Saving the last image if there is anything on it.
-        if product_count != 0:
-            plt.legend()
-            plt.savefig(os.path.join(img_folder, f"prices_{image_count + 1}"))
+                    plt.xlabel("Temps")
+                    plt.ylabel("Prix (€)")
+                    plt.savefig(os.path.join(img_folder, f"price_evolution_{product_name}"))
+                    plt.close()
 
     def get_price(self, search_name: str) -> None:
         """
