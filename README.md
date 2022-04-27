@@ -30,8 +30,8 @@ customized use.
 
 You can use the following commands to add products to the list of tracked products.
 
-- `python notino_scraper -a: <product_1; product_2; ...>`: adds a list of products. If there is more than one product,
-  make sure you separate each product name with a semicolon and a space.
+- `python notino_scraper --a=<product_1;product_2;...>`: adds a list of products. If there is more than one product,
+  make sure you separate each product name with a semicolon.
 
 > *Note*: there is no need to be exactly accurate on the names of the product you wish to add.
 > The product added will be the first result that appears in the search bar when typing the name you entered.
@@ -40,7 +40,7 @@ You can use the following commands to add products to the list of tracked produc
 
 You can use the following command to record the prices of every product in the list:
 
-- `python notino_scraper -s`
+- `python notino_scraper --snapshot`
 
 This command will loop over each product already recorded in the `.json` file and append to its list of prices the price
 found as of the current date. If there is already a price in the file for the same date and volume it will not be added.
@@ -52,7 +52,7 @@ found as of the current date. If there is already a price in the file for the sa
 You can use the following command to generate a series of graphs representing the evolution of the prices of every
 product tracked in the `.json` file:
 
-- `python notino_scraper -g`
+- `python notino_scraper --plot`
 
 By default `5` products will be put on the same graph but this can be customized.  
 The plots will be stored in a directory specified in the configuration (please check the dedicated section below).
@@ -61,7 +61,7 @@ The plots will be stored in a directory specified in the configuration (please c
 
 You can use the following command to pretty-print the data stored in the `.json` file:
 
-- `python notino_scraper -p`
+- `python notino_scraper --print`
 
 ### Predicting the optimal buying date of a product
 
@@ -71,8 +71,8 @@ Work in progress.
 
 You can also use the following command to use this tool directly instead of using it through the `.json` file:
 
-- `python notino_scraper -f: <product_1; product_2, ...>`: prints the prices of a list of products. Make sure you
-  separate each product name with a semicolon and a space.
+- `python notino_scraper --get_prices=<product_1;product_2;...>`: prints the prices of a list of products. Make sure you
+  separate each product name with a semicolon.
 
 > This feature is mostly useful for debugging purposes
 > considering that it will be faster to go on the website and see for yourself.
@@ -80,11 +80,9 @@ You can also use the following command to use this tool directly instead of usin
 ## Verbose
 
 You can set the level of verbose through the command line parameter `-v`. There are currently two levels available, by
-default the highest level of verbose will be used and you will have to use the following syntax for less verbose:
+default the highest level of verbose will be used, and you will have to use the following syntax for less verbose:
 
-- `python notino_scraper -v: "false" <other_parameters>`
-
-The other parameters are the ones mentioned above (`-p` to print, `-s` to snapshot, `-a` to add a product, ...).
+- `python notino_scraper --verbose <other_parameters>`
 
 ## Configuration
 
@@ -97,9 +95,9 @@ Basically you do not really need to worry about configuration.
 
 You can use the following commands to set the parameters:
 
-- `python notino_scraper -o: <filepath>`: sets the path of the `.json` file that stores the data.
-- `python notino_scraper -c`: sets every existing parameter with a series of questions/inputs. You might want to run
-  that one the first time you use this tool.
+- `python notino_scraper --output=<filepath>`: sets the path of the `.json` file that stores the data.
+- `python notino_scraper --config`: sets every existing parameter with a series of questions/inputs. You might want to
+  run that one the first time you use this tool.
 
 ---
 
