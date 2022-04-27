@@ -19,10 +19,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 from .product_not_found import ProductNotFoundException
 
+# TODO: define a Price TypedDict / dataclass
 
 class Scraper:
     @staticmethod
-    def setup_webdriver(**kwargs) -> WebDriver:
+    def setup_webdriver(**kwargs: str) -> WebDriver:
         """
         Sets up a Selenium WebDriver.
         Supports the following parameters:
@@ -109,7 +110,7 @@ class Scraper:
             "prices": _find_prices,
         }
 
-    def __init__(self, **kwargs) -> None:
+    def __init__(self, **kwargs: str) -> None:
         """
         Sets up a geckodriver and the info list that describe the information that can be extracted on a product.
         :param kwargs: Options accepted: headless (bool), url (str). See setup_webdriver method for more details.
