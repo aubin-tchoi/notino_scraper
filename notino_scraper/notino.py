@@ -7,14 +7,16 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from yaml import safe_load, dump, YAMLError
 
-from .scraper import Scraper
 from .product import Product
 from .product_list import ProductList
 from .product_not_found import ProductNotFoundException
+from .scraper import Scraper
 
 
 class NotinoScraper:
-    config_file: str = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "config.yml")
+    config_file: str = os.path.join(
+        os.path.dirname(os.path.realpath(__file__)), "..", "config.yml"
+    )
 
     def __init__(self, verbose: bool = True) -> None:
         """
@@ -25,13 +27,15 @@ class NotinoScraper:
         self.scraper = Scraper()
         while True:
             try:
-                with open(self.config_file, 'r') as stream:
+                with open(self.config_file, "r") as stream:
                     config = safe_load(stream)
                 self.product_list = ProductList(config["datafile"])
                 break
             except (IOError, AssertionError):
                 print("An error occurred when opening the json file.")
-                self.update_datafile(input("Please specify the path to the output json file: "))
+                self.update_datafile(
+                    input("Please specify the path to the output json file: ")
+                )
 
     @staticmethod
     def update_config(key: str, new_value: str) -> None:
@@ -40,7 +44,7 @@ class NotinoScraper:
         :param key: The key to update.
         :param new_value: The value to update with.
         """
-        with open(NotinoScraper.config_file, 'r') as stream:
+        with open(NotinoScraper.config_file, "r") as stream:
             config = safe_load(stream)
 
         config[key] = new_value
@@ -81,10 +85,14 @@ class NotinoScraper:
         """
         enter = "(press ENTER to leave it as it is): "
         config_parameters = {
-            'datafile': (f"Please specify the path to the output json file {enter}",
-                         NotinoScraper.update_datafile),
-            'img_folder': (f"Please specify the folder in which the images will be stored {enter}",
-                           NotinoScraper.update_img_folder)
+            "datafile": (
+                f"Please specify the path to the output json file {enter}",
+                NotinoScraper.update_datafile,
+            ),
+            "img_folder": (
+                f"Please specify the folder in which the images will be stored {enter}",
+                NotinoScraper.update_img_folder,
+            ),
         }
         for parameter in config_parameters:
             # Asking for user input again and again until a correct value is provided or the default value is kept.
@@ -122,7 +130,9 @@ class NotinoScraper:
         if self.verbose:
             print(f"\nLooking for: {product_name}")
         if product_name != "":
-            self.product_list.add_product(self.scraper.get_description(product_name), self.verbose)
+            self.product_list.add_product(
+                self.scraper.get_description(product_name), self.verbose
+            )
             self.product_list.save()
 
     def plot_evolution(self) -> None:
@@ -131,37 +141,53 @@ class NotinoScraper:
         """
         while True:
             try:
-                with open(self.config_file, 'r') as stream:
+                with open(self.config_file, "r") as stream:
                     config = safe_load(stream)
                 img_folder = config["img_folder"]
                 break
             except KeyError as e:
                 if e.args[0] == "img_folder":
-                    self.update_img_folder(input("Please specify the folder in which the images will be stored: "))
+                    self.update_img_folder(
+                        input(
+                            "Please specify the folder in which the images will be stored: "
+                        )
+                    )
 
         sns.set(color_codes=True)
 
         for product in self.product_list.products:
             # There can be different sizes for the same product.
-            plots: DefaultDict[str, DefaultDict[str, List[Tuple[datetime.date, float]]]] = defaultdict(
-                lambda: defaultdict(list))
+            plots: DefaultDict[
+                str, DefaultDict[str, List[Tuple[datetime.date, float]]]
+            ] = defaultdict(lambda: defaultdict(list))
             for price in product.prices:
-                if price != "Info not found." and price['price'] != "Product not available." and price[
-                        'price'] != "Price not found.":
+                if (
+                    price != "Info not found."
+                    and price["price"] != "Product not available."
+                    and price["price"] != "Price not found."
+                ):
                     plots[f"{product.get_search_name()}"][f"{price['volume']}"].append(
-                        (datetime.date.fromisoformat(price['date']), float(price['price'].replace(',', '.'))))
+                        (
+                            datetime.date.fromisoformat(price["date"]),
+                            float(price["price"].replace(",", ".")),
+                        )
+                    )
             for product_name in plots:
                 # Removing the products that have too few prices recorded.
                 if sum(len(p) for p in plots[product_name].values()) > 10:
                     plt.figure(clear=True, figsize=(14, 14))
                     for volume in plots[product_name]:
-                        plt.plot([t[0] for t in plots[product_name][volume]],
-                                 [t[1] for t in plots[product_name][volume]],
-                                 label=f"{product_name} {volume}")
+                        plt.plot(
+                            [t[0] for t in plots[product_name][volume]],
+                            [t[1] for t in plots[product_name][volume]],
+                            label=f"{product_name} {volume}",
+                        )
                     plt.legend()
                     plt.xlabel("Temps")
                     plt.ylabel("Prix (€)")
-                    plt.savefig(os.path.join(img_folder, f"price_evolution_{product_name}"))
+                    plt.savefig(
+                        os.path.join(img_folder, f"price_evolution_{product_name}")
+                    )
                     plt.close()
 
     def get_price(self, search_name: str) -> None:

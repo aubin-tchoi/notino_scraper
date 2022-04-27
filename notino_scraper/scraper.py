@@ -4,8 +4,13 @@ from typing import Callable
 
 import nltk
 from selenium import webdriver
-from selenium.common.exceptions import InvalidArgumentException, InvalidSelectorException
-from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, TimeoutException
+from selenium.common.exceptions import (
+    InvalidArgumentException,
+    InvalidSelectorException,
+    NoSuchElementException,
+    StaleElementReferenceException,
+    TimeoutException,
+)
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.webdriver import WebDriver
@@ -16,7 +21,6 @@ from .product_not_found import ProductNotFoundException
 
 
 class Scraper:
-
     @staticmethod
     def setup_webdriver(**kwargs) -> WebDriver:
         """
@@ -37,10 +41,10 @@ class Scraper:
         try:
             web_driver.get(url)
         except InvalidArgumentException:
-            if url.startswith('www'):
-                web_driver.get('https://' + url)
+            if url.startswith("www"):
+                web_driver.get("https://" + url)
             else:
-                web_driver.get('https://www.' + url)
+                web_driver.get("https://www." + url)
 
         return web_driver
 
@@ -56,27 +60,53 @@ class Scraper:
 
         def _single_selector_reader(css_selector: str, attribute: str) -> Callable:
             return lambda: format_info(
-                self.web_driver.find_element(By.CSS_SELECTOR, css_selector).get_attribute(attribute))
+                self.web_driver.find_element(
+                    By.CSS_SELECTOR, css_selector
+                ).get_attribute(attribute)
+            )
 
         def _find_prices():
             try:
-                return [{
-                    "price": variant.find_element(By.CSS_SELECTOR, "div > span").get_attribute("content"),
-                    "volume": format_info(variant.find_element(
-                        By.CSS_SELECTOR, "[class~=pd-variant-label]").get_attribute("innerHTML")),
-                    "date": datetime.date.today().isoformat()
-                } for variant in
-                    self.web_driver.find_element(value="pdVariantsTile").find_elements(By.TAG_NAME, "li")]
+                return [
+                    {
+                        "price": variant.find_element(
+                            By.CSS_SELECTOR, "div > span"
+                        ).get_attribute("content"),
+                        "volume": format_info(
+                            variant.find_element(
+                                By.CSS_SELECTOR, "[class~=pd-variant-label]"
+                            ).get_attribute("innerHTML")
+                        ),
+                        "date": datetime.date.today().isoformat(),
+                    }
+                    for variant in self.web_driver.find_element(
+                        value="pdVariantsTile"
+                    ).find_elements(By.TAG_NAME, "li")
+                ]
             except NoSuchElementException:
-                return [{"price": _single_selector_reader("[id=pd-price] span", "content")(),
-                         "volume": _single_selector_reader("[id=pdSelectedVariant] [class*=Name] span", "innerHTML")(),
-                         "date": datetime.date.today().isoformat()}]
+                return [
+                    {
+                        "price": _single_selector_reader(
+                            "[id=pd-price] span", "content"
+                        )(),
+                        "volume": _single_selector_reader(
+                            "[id=pdSelectedVariant] [class*=Name] span", "innerHTML"
+                        )(),
+                        "date": datetime.date.today().isoformat(),
+                    }
+                ]
 
         return {
-            "product_name": _single_selector_reader("div[id='pdHeader'] [class*=ProductName] span", "innerHTML"),
-            "description": _single_selector_reader("div[id='pdHeader'] [class*=Description]", "innerHTML"),
-            "brand": _single_selector_reader("div[id='pdHeader'] [class*=Brand]", "innerHTML"),
-            "prices": _find_prices
+            "product_name": _single_selector_reader(
+                "div[id='pdHeader'] [class*=ProductName] span", "innerHTML"
+            ),
+            "description": _single_selector_reader(
+                "div[id='pdHeader'] [class*=Description]", "innerHTML"
+            ),
+            "brand": _single_selector_reader(
+                "div[id='pdHeader'] [class*=Brand]", "innerHTML"
+            ),
+            "prices": _find_prices,
         }
 
     def __init__(self, **kwargs) -> None:
@@ -100,12 +130,17 @@ class Scraper:
         """
         unavailable_message = "Cet article n'est pas disponible actuellement"
         unavailable_spans = self.web_driver.find_elements(
-            By.CSS_SELECTOR, f"div[id=pdSelectedVariant] + div > span")
-        return not (len(unavailable_spans) > 0 and unavailable_spans[0].get_attribute(
-            "innerHTML") == unavailable_message)
+            By.CSS_SELECTOR, f"div[id=pdSelectedVariant] + div > span"
+        )
+        return not (
+            len(unavailable_spans) > 0
+            and unavailable_spans[0].get_attribute("innerHTML") == unavailable_message
+        )
 
     @staticmethod
-    def result_match(first_string: str, second_string: str, threshold: float = 0.20) -> bool:
+    def result_match(
+        first_string: str, second_string: str, threshold: float = 0.20
+    ) -> bool:
         """
         Finds out if two strings are similar enough to consider them as describing the same product.
         :param first_string: The first string to compare.
@@ -116,7 +151,11 @@ class Scraper:
         if first_string in second_string or second_string in first_string:
             return True
 
-        return nltk.edit_distance(first_string, second_string) / min(len(second_string), len(first_string)) <= threshold
+        return (
+            nltk.edit_distance(first_string, second_string)
+            / min(len(second_string), len(first_string))
+            <= threshold
+        )
 
     def search_finalized(self, product_name: str) -> Callable:
         """
@@ -129,15 +168,19 @@ class Scraper:
 
         def _predicate(web_driver: WebDriver) -> bool:
             try:
-                elements = web_driver.find_elements(By.CSS_SELECTOR,
-                                                    "div[id='header-suggestProductCol'] a[id='header-productWrapper']")
+                elements = web_driver.find_elements(
+                    By.CSS_SELECTOR,
+                    "div[id='header-suggestProductCol'] a[id='header-productWrapper']",
+                )
                 if len(elements) <= 0:
                     return False
                 else:
-                    return self.result_match(elements[0]
-                                             .find_element(By.CSS_SELECTOR, "div span")
-                                             .get_attribute("innerHTML"),
-                                             product_name)
+                    return self.result_match(
+                        elements[0]
+                        .find_element(By.CSS_SELECTOR, "div span")
+                        .get_attribute("innerHTML"),
+                        product_name,
+                    )
             except InvalidSelectorException as e:
                 raise e
             except StaleElementReferenceException:
@@ -151,7 +194,8 @@ class Scraper:
         :return: The WebElement that points at the first item in the column of suggestions.
         """
         return self.web_driver.find_element(
-            value="header-suggestSectionCol").find_elements(By.TAG_NAME, "a")[0]
+            value="header-suggestSectionCol"
+        ).find_elements(By.TAG_NAME, "a")[0]
 
     def fetch_product_info(self, product_name: str, *features: str) -> dict:
         """
@@ -160,27 +204,39 @@ class Scraper:
         :param features: The features to extract. By default, all of them will be extracted.
         :return: A dictionary containing the extracted information.
         """
-        searchBar = self.web_driver.find_element(By.CSS_SELECTOR, "[id='pageHeader'] input")
+        searchBar = self.web_driver.find_element(
+            By.CSS_SELECTOR, "[id='pageHeader'] input"
+        )
         searchBar.send_keys(product_name)
 
         try:
             WebDriverWait(self.web_driver, 3).until(self.search_finalized(product_name))
-            self.web_driver.get(self.web_driver.find_element(By.CSS_SELECTOR, "div[id='header-suggestProductCol']")
-                                .find_elements(By.CSS_SELECTOR, "a[id='header-productWrapper']")[0]
-                                .get_attribute("href"))
+            self.web_driver.get(
+                self.web_driver.find_element(
+                    By.CSS_SELECTOR, "div[id='header-suggestProductCol']"
+                )
+                .find_elements(By.CSS_SELECTOR, "a[id='header-productWrapper']")[0]
+                .get_attribute("href")
+            )
         except TimeoutException:
             try:
                 suggestion = self.get_first_suggestion()
-                if self.result_match(suggestion.get_attribute("innerHTML"), product_name):
+                if self.result_match(
+                    suggestion.get_attribute("innerHTML"), product_name
+                ):
                     self.web_driver.get(suggestion.get_attribute("href"))
                 else:
                     raise ProductNotFoundException(product_name)
             except TimeoutException:
                 searchBar.send_keys(Keys.ENTER)
-                WebDriverWait(self.web_driver, 3).until(lambda x: x.find_element(value="productsList"))
-                self.web_driver.get(self.web_driver.find_element(value="productsList")
-                                    .find_element(By.TAG_NAME, "a")
-                                    .get_attribute("href"))
+                WebDriverWait(self.web_driver, 3).until(
+                    lambda x: x.find_element(value="productsList")
+                )
+                self.web_driver.get(
+                    self.web_driver.find_element(value="productsList")
+                    .find_element(By.TAG_NAME, "a")
+                    .get_attribute("href")
+                )
 
         feature_readers, fetched_info = self.set_info_list(), {}
 
@@ -188,15 +244,25 @@ class Scraper:
             try:
                 fetched_info[feature] = feature_readers[feature]()
             except NoSuchElementException:
-                print(f"Issue raised when retrieving the {feature} on the product {product_name}:\n")
+                print(
+                    f"Issue raised when retrieving the {feature} on the product {product_name}:\n"
+                )
                 print(traceback.format_exc())
                 if feature == "prices":
                     if not self.is_product_available():
-                        fetched_info[feature] = [{"price": "Product not available.",
-                                                  "date": datetime.date.today().isoformat()}]
+                        fetched_info[feature] = [
+                            {
+                                "price": "Product not available.",
+                                "date": datetime.date.today().isoformat(),
+                            }
+                        ]
                     else:
-                        fetched_info[feature] = [{"price": "Price not found.",
-                                                  "date": datetime.date.today().isoformat()}]
+                        fetched_info[feature] = [
+                            {
+                                "price": "Price not found.",
+                                "date": datetime.date.today().isoformat(),
+                            }
+                        ]
                 else:
                     fetched_info[feature] = "Info not found."
 
@@ -208,7 +274,9 @@ class Scraper:
         :param product_name: The name of the product to look into.
         :return: A dictionary containing the information mentioned above.
         """
-        return self.fetch_product_info(product_name, "product_name", "description", "brand")
+        return self.fetch_product_info(
+            product_name, "product_name", "description", "brand"
+        )
 
     def get_prices(self, product_name: str) -> list:
         """

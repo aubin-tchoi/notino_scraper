@@ -1,4 +1,3 @@
----
-datafile: C:\Users\<user>\products.json
-img_folder: C:\Users\<user>\images
-...
+datafile: C:\Users\aubin\Downloads\products.json
+img_folder: C:\Users\aubin\Downloads\images
+products_per_plot: '5'

@@ -5,7 +5,6 @@ from .product import Product
 
 
 class ProductList:
-
     def __init__(self, filename: str) -> None:
         """
         Parses the json file under the name filename and dumps the data read into the 'products' attribute.
@@ -22,8 +21,10 @@ class ProductList:
         Computes a string representation of this object by listing each product one after the other.
         :return: The string representation of a list of products.
         """
-        return "\n\n".join([repr(product) for product in self.products]) +\
-               f"\n\nFound prices for {len(self.products)} products."
+        return (
+            "\n\n".join([repr(product) for product in self.products])
+            + f"\n\nFound prices for {len(self.products)} products."
+        )
 
     def get_products(self) -> list[Product]:
         """
@@ -40,12 +41,12 @@ class ProductList:
             backup = json.load(json_file)
 
         try:
-            with open(self.filename, 'w') as json_file:
+            with open(self.filename, "w") as json_file:
                 json.dump([product.__dict__ for product in self.products], json_file)
         except:
             print(f"An issue was raised when saving the json file:\n")
             print(traceback.format_exc())
-            with open(self.filename, 'w') as json_file:
+            with open(self.filename, "w") as json_file:
                 json.dump(backup, json_file)
 
     def add_product(self, product_info: dict, verbose: bool) -> None:

@@ -1,5 +1,4 @@
 class Product:
-
     def __init__(self, product_info: dict) -> None:
         """
         Instantiates a new Product with the information provided. Creates an empty list of prices of none is given.
@@ -31,9 +30,11 @@ class Product:
         :param other: The Product to check with.
         :return: True if the two Products refer to the same item on the website.
         """
-        return self.product_name.lower() == other.product_name.lower() and (
-                self.description.lower() == other.description.lower()) and (
-                       self.brand.lower() == other.brand.lower())
+        return (
+            self.product_name.lower() == other.product_name.lower()
+            and (self.description.lower() == other.description.lower())
+            and (self.brand.lower() == other.brand.lower())
+        )
 
     def __add__(self, other):
         """
@@ -42,7 +43,9 @@ class Product:
         :return: A Product that contains all the prices recorded.
         """
         if self != other:
-            raise AssertionError("Trying to add two Products that do not refer to the same item on the website.")
+            raise AssertionError(
+                "Trying to add two Products that do not refer to the same item on the website."
+            )
         else:
             self.prices += other.prices
             return self
@@ -55,8 +58,9 @@ class Product:
         for price_info in prices:
             if price_info["date"] not in [price["date"] for price in self.prices]:
                 self.prices.append(price_info)
-            elif "volume" not in price_info or price_info["volume"] not in [price["volume"] if "volume" in price else ""
-                                                                            for price in self.prices]:
+            elif "volume" not in price_info or price_info["volume"] not in [
+                price["volume"] if "volume" in price else "" for price in self.prices
+            ]:
                 self.prices.append(price_info)
 
     def get_search_name(self) -> str:
