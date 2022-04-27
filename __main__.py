@@ -1,47 +1,78 @@
-import getopt
+import argparse
 import sys
+
 from notino_scraper import NotinoScraper
 
-if __name__ == '__main__':
-    argv = sys.argv[1:]
-    opts, args = getopt.getopt(argv,
-                               "pso:a:v:gf:c",
-                               ["print",
-                                "take_snapshot",
-                                "output_file=",
-                                "add_products=",
-                                "verbose=",
-                                "plot",
-                                "get_prices=",
-                                "set_config"])
-    verbose = True
 
-    for opt, arg in opts:
-        if opt in ("-o", "--output"):
-            NotinoScraper.update_datafile(arg)
-            exit()
-        if opt in ("-c", "--set_config"):
-            NotinoScraper.set_config_parameters()
-            exit()
-        if opt in ("-v", "--verbose"):
-            verbose = arg not in ["False", "false", "N", "n"]
+def parse_args() -> argparse.Namespace:
+    """
+    Parses the CLI arguments passed to the main using argparse.
+
+    :return: The Namespace that stores the arguments passed.
+    """
+    parser = argparse.ArgumentParser(
+        description="Main entry point for the NotinoScraper API."
+    )
+
+    parser.add_argument("--verbose", action="store_false", help="Verbose.")
+    parser.add_argument(
+        "--config", action="store_true", help="Sets the config in command line."
+    )
+    parser.add_argument(
+        "--output",
+        type=str,
+        default="",
+        help="Change the path of the json file synchronized.",
+    )
+    parser.add_argument("--print", action="store_true", help="Print the product list.")
+    parser.add_argument(
+        "--snapshot",
+        action="store_true",
+        help="Snapshot the prices of the products recorded.",
+    )
+    parser.add_argument(
+        "--plot", action="store_true", help="Plot the evolution of the prices."
+    )
+    parser.add_argument(
+        "--add_products",
+        type=str,
+        default="",
+        help="Semicolon-separated names of the products to add.",
+    )
+    parser.add_argument(
+        "--get_prices",
+        type=str,
+        default="",
+        help="Semicolon-separated names of the products to get the prices of.",
+    )
+
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    argv = sys.argv[1:]
+    args = parse_args()
+
+    if args.output != "":
+        NotinoScraper.update_datafile(args.output)
+        exit()
+    if args.config:
+        NotinoScraper.set_config_parameters()
+        exit()
 
     # This instantiation takes some time.
-    notino_scraper = NotinoScraper(verbose)
+    notino_scraper = NotinoScraper(args.verbose)
 
-    for opt, arg in opts:
-        if opt in ("-p", "--print"):
-            print(notino_scraper.product_list)
-        if opt in ("-s", "--take_snapshot"):
-            notino_scraper.take_snapshot()
-        if opt in ("-g", "--plot"):
-            notino_scraper.plot_evolution()
-        if opt in ("-a", "--add_products"):
-            for product_name in arg.split("; "):
-                notino_scraper.add_product(product_name)
-        if opt in ("-f", "--get_prices"):
-            for search_name in arg.split("; "):
-                notino_scraper.get_price(search_name)
+    if args.print:
+        print(notino_scraper.product_list)
+    if args.snapshot:
+        notino_scraper.take_snapshot()
+    if args.plot:
+        notino_scraper.plot_evolution()
+    for product_name in args.add_products.split(";"):
+        notino_scraper.add_product(product_name)
+    for search_name in args.get_prices.split("; "):
+        notino_scraper.get_price(search_name)
 
-    if verbose:
+    if args.verbose:
         print("Execution successfully ended.")
