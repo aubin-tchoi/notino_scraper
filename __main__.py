@@ -4,6 +4,9 @@ import sys
 from notino_scraper import NotinoScraper
 
 
+# TODO: use numpy docstrings convention
+
+
 def parse_args() -> argparse.Namespace:
     """
     Parses the CLI arguments passed to the main using argparse.
@@ -14,7 +17,9 @@ def parse_args() -> argparse.Namespace:
         description="Main entry point for the NotinoScraper API."
     )
 
-    parser.add_argument("--verbose", action="store_false", help="Verbose.")
+    parser.add_argument(
+        "--verbose", action="store_false", help="Sets the verbose to True."
+    )
     parser.add_argument(
         "--config", action="store_true", help="Sets the config in command line."
     )
@@ -22,28 +27,30 @@ def parse_args() -> argparse.Namespace:
         "--output",
         type=str,
         default="",
-        help="Change the path of the json file synchronized.",
+        help="Changes the path of the json file synchronized.",
     )
-    parser.add_argument("--print", action="store_true", help="Print the product list.")
+
+    parser.add_argument("--print", action="store_true", help="Prints the product list.")
+
     parser.add_argument(
         "--snapshot",
         action="store_true",
-        help="Snapshot the prices of the products recorded.",
+        help="Snapshots the prices of the products recorded.",
     )
     parser.add_argument(
-        "--plot", action="store_true", help="Plot the evolution of the prices."
+        "--plot", action="store_true", help="Plots the evolution of the prices."
     )
     parser.add_argument(
         "--add_products",
         type=str,
         default="",
-        help="Semicolon-separated names of the products to add.",
+        help="Adds the semicolon-separated names of products passed to the list of products.",
     )
     parser.add_argument(
         "--get_prices",
         type=str,
         default="",
-        help="Semicolon-separated names of the products to get the prices of.",
+        help="Fetches the prices for the semicolon-separated names of products passed.",
     )
 
     return parser.parse_args()
