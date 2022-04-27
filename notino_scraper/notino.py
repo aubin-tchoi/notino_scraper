@@ -155,6 +155,28 @@ class NotinoScraper:
 
         sns.set(color_codes=True)
 
+        y_min, y_max = (
+            min(
+                float(price["price"].replace(",", "."))
+                for product in self.product_list.products
+                for price in product.prices
+                if (
+                    price != "Info not found."
+                    and price["price"] != "Product not available."
+                    and price["price"] != "Price not found."
+                )
+            ),
+            max(
+                float(price["price"].replace(",", "."))
+                for product in self.product_list.products
+                for price in product.prices
+                if (
+                    price != "Info not found."
+                    and price["price"] != "Product not available."
+                    and price["price"] != "Price not found."
+                )
+            ),
+        )
         for product in self.product_list.products:
             # There can be different sizes for the same product.
             plots: DefaultDict[
@@ -185,6 +207,7 @@ class NotinoScraper:
                     plt.legend()
                     plt.xlabel("Temps")
                     plt.ylabel("Prix (€)")
+                    plt.ylim((y_min, y_max))
                     plt.savefig(
                         os.path.join(img_folder, f"price_evolution_{product_name}")
                     )
