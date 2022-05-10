@@ -62,7 +62,7 @@ def parse_args() -> argparse.Namespace:
 if __name__ == "__main__":
     argv = sys.argv[1:]
     args = parse_args()
-    print(args.debug)
+
     if args.output != "":
         NotinoScraper.update_datafile(args.output)
         exit()
