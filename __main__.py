@@ -21,6 +21,9 @@ def parse_args() -> argparse.Namespace:
         "--verbose", action="store_false", help="Sets the verbose to True."
     )
     parser.add_argument(
+        "--debug", action="store_true", help="Debug mode."
+    )
+    parser.add_argument(
         "--config", action="store_true", help="Sets the config in command line."
     )
     parser.add_argument(
@@ -59,7 +62,7 @@ def parse_args() -> argparse.Namespace:
 if __name__ == "__main__":
     argv = sys.argv[1:]
     args = parse_args()
-
+    print(args.debug)
     if args.output != "":
         NotinoScraper.update_datafile(args.output)
         exit()
@@ -68,7 +71,7 @@ if __name__ == "__main__":
         exit()
 
     # This instantiation takes some time.
-    notino_scraper = NotinoScraper(args.verbose)
+    notino_scraper = NotinoScraper(args.verbose, args.debug)
 
     if args.print:
         print(notino_scraper.product_list)

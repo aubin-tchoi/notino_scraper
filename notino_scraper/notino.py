@@ -18,13 +18,13 @@ class NotinoScraper:
         os.path.dirname(os.path.realpath(__file__)), "..", "config.yml"
     )
 
-    def __init__(self, verbose: bool = True) -> None:
+    def __init__(self, verbose: bool = True, debug: bool = False) -> None:
         """
         Loads the config and instantiates a Scraper and a ProductList.
         :param verbose: The level of verbose to use. True means more messages printed.
         """
         self.verbose = verbose
-        self.scraper = Scraper()
+        self.scraper = Scraper(headless=not debug)
         while True:
             try:
                 with open(self.config_file, "r") as stream:
