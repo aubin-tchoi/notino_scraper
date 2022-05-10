@@ -211,6 +211,12 @@ class Scraper:
         :param features: The features to extract. By default, all of them will be extracted.
         :return: A dictionary containing the extracted information.
         """
+        # Dealing with the cookie modal.
+        try:
+            self.web_driver.find_element(By.CSS_SELECTOR, "[id='exponea-cookie-compliance'] a[class~=close]").click()
+        except NoSuchElementException:
+            pass
+
         searchBar = self.web_driver.find_element(
             By.CSS_SELECTOR, "[id='pageHeader'] input"
         )
