@@ -1,6 +1,6 @@
 import datetime
 import traceback
-from typing import Callable
+from typing import Callable, Union
 
 import nltk
 from selenium import webdriver
@@ -23,7 +23,7 @@ from .product_not_found import ProductNotFoundException
 
 class Scraper:
     @staticmethod
-    def setup_webdriver(**kwargs: str) -> WebDriver:
+    def setup_webdriver(**kwargs: Union[str, bool]) -> WebDriver:
         """
         Sets up a Selenium WebDriver.
         Supports the following parameters:
@@ -66,13 +66,19 @@ class Scraper:
                 ).get_attribute(attribute)
             )
 
+        def _read_variant_price(variant) -> str:
+            try:
+                return variant.find_element(
+                    By.CSS_SELECTOR, "div > span"
+                ).get_attribute("content")
+            except NoSuchElementException:
+                return "Price not found."
+
         def _find_prices():
             try:
                 return [
                     {
-                        "price": variant.find_element(
-                            By.CSS_SELECTOR, "div > span"
-                        ).get_attribute("content"),
+                        "price": _read_variant_price(variant),
                         "volume": format_info(
                             variant.find_element(
                                 By.CSS_SELECTOR, "[class~=pd-variant-label]"
@@ -110,7 +116,7 @@ class Scraper:
             "prices": _find_prices,
         }
 
-    def __init__(self, **kwargs: str) -> None:
+    def __init__(self, **kwargs: Union[str, bool]) -> None:
         """
         Sets up a geckodriver and the info list that describe the information that can be extracted on a product.
         :param kwargs: Options accepted: headless (bool), url (str). See setup_webdriver method for more details.
