@@ -11,7 +11,8 @@ def parse_args() -> argparse.Namespace:
     """
     Parses the CLI arguments passed to the main using argparse.
 
-    :return: The Namespace that stores the arguments passed.
+    Returns:
+        The Namespace that stores the arguments passed.
     """
     parser = argparse.ArgumentParser(
         description="Main entry point for the NotinoScraper API."

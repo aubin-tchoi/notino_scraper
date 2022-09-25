@@ -21,7 +21,9 @@ class NotinoScraper:
     def __init__(self, verbose: bool = True, debug: bool = False) -> None:
         """
         Loads the config and instantiates a Scraper and a ProductList.
-        :param verbose: The level of verbose to use. True means more messages printed.
+
+        Args:
+            verbose: The level of verbose to use. True means more messages printed.
         """
         self.verbose = verbose
         self.scraper = Scraper(headless=not debug)
@@ -41,8 +43,10 @@ class NotinoScraper:
     def update_config(key: str, new_value: str) -> None:
         """
         Updates the value associated with the provided key in the yaml config file.
-        :param key: The key to update.
-        :param new_value: The value to update with.
+
+        Args:
+            key: The key to update.
+            new_value: The value to update with.
         """
         with open(NotinoScraper.config_file, "r") as stream:
             config = safe_load(stream)
@@ -59,7 +63,9 @@ class NotinoScraper:
     def update_datafile(new_datafile: str) -> None:
         """
         Updates the value associated with key "datafile" in the yaml config file.
-        :param new_datafile: The value to replace with.
+
+        Args:
+            new_datafile: The value to replace with.
         """
         if not new_datafile.endswith(".json"):
             new_datafile += ".json"
@@ -71,7 +77,9 @@ class NotinoScraper:
     def update_img_folder(new_folder: str) -> None:
         """
         Updates the value associated with key "img_folder" in the yaml config file.
-        :param new_folder: The value to replace with.
+
+        Args:
+            new_folder: The value to replace with.
         """
         assert os.path.isdir(new_folder), "Invalid folder path provided."
 
@@ -125,7 +133,9 @@ class NotinoScraper:
     def add_product(self, product_name: str) -> None:
         """
         Adds a product to the list of products.
-        :param product_name: The name of the product to add.
+
+        Args:
+            product_name: The name of the product to add.
         """
         if self.verbose:
             print(f"\nLooking for: {product_name}")
@@ -217,6 +227,8 @@ class NotinoScraper:
         """
         Prints the current price of a product.
         Mostly useful for debugging purposes when used without headless mode.
-        :param search_name: The name of the product to search for.
+
+        Args:
+            search_name: The name of the product to search for.
         """
         print(Product(self.scraper.fetch_product_info(search_name)))

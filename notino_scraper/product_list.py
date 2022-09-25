@@ -1,5 +1,6 @@
 import json
 import traceback
+from typing import List
 
 from .product import Product
 
@@ -8,7 +9,9 @@ class ProductList:
     def __init__(self, filename: str) -> None:
         """
         Parses the json file under the name filename and dumps the data read into the 'products' attribute.
-        :param filename: The path that leads to the json file to read.
+
+        Args:
+            filename: The path that leads to the json file to read.
         """
         self.filename = filename
         assert filename.endswith(".json")
@@ -19,17 +22,21 @@ class ProductList:
     def __repr__(self) -> str:
         """
         Computes a string representation of this object by listing each product one after the other.
-        :return: The string representation of a list of products.
+
+        Returns:
+            The string representation of a list of products.
         """
         return (
-            "\n\n".join([repr(product) for product in self.products])
+            "\n\n".join(repr(product) for product in self.products)
             + f"\n\nFound prices for {len(self.products)} products."
         )
 
-    def get_products(self) -> list[Product]:
+    def get_products(self) -> List[Product]:
         """
         Getter for the product list.
-        :return: The list of the products.
+
+        Returns:
+            The list of the products.
         """
         return self.products
 
@@ -52,8 +59,10 @@ class ProductList:
     def add_product(self, product_info: dict, verbose: bool) -> None:
         """
         Adds a product to the list of product.
-        :param product_info: A dictionary containing the information known on the product.
-        :param verbose: Verbose.
+
+        Args:
+            product_info: A dictionary containing the information known on the product.
+            verbose: Verbose.
         """
         new_product = Product(product_info)
         for product in self.products:

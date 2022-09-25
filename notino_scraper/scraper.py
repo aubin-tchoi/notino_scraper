@@ -21,19 +21,20 @@ from .product_not_found import ProductNotFoundException
 
 # TODO: define a Price TypedDict / dataclass
 
+
 class Scraper:
     @staticmethod
-    def setup_webdriver(**kwargs: Union[str, bool]) -> WebDriver:
+    def setup_webdriver(url: str = "notino.fr", headless: bool = True) -> WebDriver:
         """
         Sets up a Selenium WebDriver.
-        Supports the following parameters:
-        - url: the base url to log on to.
-        - headless: whether the WebDriver will be run in headless mode or not.
-        :param kwargs: A dictionary containing the parameters listed above.
-        :return: A Firefox (geckodriver) WebDriver logged into the provided url (default: notino.fr).
+
+        Args:
+            url: the base url to log on to.
+            headless: whether the WebDriver will be run in headless mode or not.
+
+        Returns:
+            A Firefox (geckodriver) WebDriver logged into the provided url (default: notino.fr).
         """
-        url = kwargs["url"] if "url" in kwargs else "notino.fr"
-        headless = kwargs["headless"] if "headless" in kwargs else True
 
         options = webdriver.FirefoxOptions()
         options.headless = headless
@@ -53,7 +54,9 @@ class Scraper:
         """
         Sets up a list of features that can be extracted from a product's page and the methods that extracts them.
         The values in the returned dict are thus methods that have to be run when logged on to the product's page.
-        :return: A dictionary whose keys are features and values methods that extract them.
+
+        Returns:
+            A dictionary whose keys are features and values methods that extract them.
         """
 
         def format_info(fetched_info: str) -> str:
@@ -119,7 +122,9 @@ class Scraper:
     def __init__(self, **kwargs: Union[str, bool]) -> None:
         """
         Sets up a geckodriver and the info list that describe the information that can be extracted on a product.
-        :param kwargs: Options accepted: headless (bool), url (str). See setup_webdriver method for more details.
+
+        Args:
+             kwargs: Options accepted: headless (bool), url (str). See setup_webdriver method for more details.
         """
         self.web_driver = self.setup_webdriver(**kwargs)
         self.info_list = self.set_info_list()
@@ -133,9 +138,11 @@ class Scraper:
     def is_product_available(self) -> bool:
         """
         Checks if the product found on the current page is available.
-        :return: True if the product is available, False otherwise.
+
+        Returns:
+            True if the product is available, False otherwise.
         """
-        unavailable_message = "Cet article n'est pas disponible actuellement"
+        unavailable_message = "This product is not available at the moment."
         unavailable_spans = self.web_driver.find_elements(
             By.CSS_SELECTOR, f"div[id=pdSelectedVariant] + div > span"
         )
@@ -150,10 +157,14 @@ class Scraper:
     ) -> bool:
         """
         Finds out if two strings are similar enough to consider them as describing the same product.
-        :param first_string: The first string to compare.
-        :param second_string: The second string to compare.
-        :param threshold: A threshold setting the line between a return value of True or False.
-        :return: True if the two strings describe the same product, False otherwise.
+
+        Args:
+            first_string: The first string to compare.
+            second_string: The second string to compare.
+            threshold: A threshold setting the line between a return value of True or False.
+
+        Returns:
+            True if the two strings describe the same product, False otherwise.
         """
         if first_string in second_string or second_string in first_string:
             return True
@@ -169,8 +180,12 @@ class Scraper:
         Instantiates a method that can be used to tell if the result section has finished loading.
         Checks the result section to see if it matches the content put in the search bar.
         Meant to be used in a WebDriverWait command.
-        :param product_name: The content put in the search bar.
-        :return: A method that will return True if the result section has finished loading and False otherwise.
+
+        Args:
+            product_name: The content put in the search bar.
+
+        Returns:
+            A method that will return True if the result section has finished loading and False otherwise.
         """
 
         def _predicate(web_driver: WebDriver) -> bool:
@@ -198,7 +213,9 @@ class Scraper:
     def get_first_suggestion(self) -> WebElement:
         """
         Finds the first suggestion in the suggestion section.
-        :return: The WebElement that points at the first item in the column of suggestions.
+
+        Returns:
+            The WebElement that points at the first item in the column of suggestions.
         """
         return self.web_driver.find_element(
             value="header-suggestSectionCol"
@@ -207,20 +224,26 @@ class Scraper:
     def fetch_product_info(self, product_name: str, *features: str) -> dict:
         """
         Extracts a list of information on a product.
-        :param product_name: The name of the product to put in the search bar.
-        :param features: The features to extract. By default, all of them will be extracted.
-        :return: A dictionary containing the extracted information.
+
+        Args:
+            product_name: The name of the product to put in the search bar.
+            features: The features to extract. By default, all of them will be extracted.
+
+        Returns:
+            A dictionary containing the extracted information.
         """
         # Dealing with the cookie modal.
         try:
-            self.web_driver.find_element(By.CSS_SELECTOR, "[id='exponea-cookie-compliance'] a[class~=close]").click()
+            self.web_driver.find_element(
+                By.CSS_SELECTOR, "[id='exponea-cookie-compliance'] a[class~=close]"
+            ).click()
         except NoSuchElementException:
             pass
 
-        searchBar = self.web_driver.find_element(
+        search_bar = self.web_driver.find_element(
             By.CSS_SELECTOR, "[id='pageHeader'] input"
         )
-        searchBar.send_keys(product_name)
+        search_bar.send_keys(product_name)
 
         try:
             WebDriverWait(self.web_driver, 3).until(self.search_finalized(product_name))
@@ -241,7 +264,7 @@ class Scraper:
                 else:
                     raise ProductNotFoundException(product_name)
             except TimeoutException:
-                searchBar.send_keys(Keys.ENTER)
+                search_bar.send_keys(Keys.ENTER)
                 WebDriverWait(self.web_driver, 3).until(
                     lambda x: x.find_element(value="productsList")
                 )
@@ -284,8 +307,12 @@ class Scraper:
     def get_description(self, product_name: str) -> dict:
         """
         Finds the following information on a product: name, description and brand name.
-        :param product_name: The name of the product to look into.
-        :return: A dictionary containing the information mentioned above.
+
+        Args:
+            product_name: The name of the product to look into.
+
+        Returns:
+            A dictionary containing the information mentioned above.
         """
         return self.fetch_product_info(
             product_name, "product_name", "description", "brand"
@@ -294,7 +321,11 @@ class Scraper:
     def get_prices(self, product_name: str) -> list:
         """
         Finds the following information on a product: price as of the date the script is run, volume and current date.
-        :param product_name: The name of the product to look into.
-        :return: A dictionary containing the information mentioned above.
+
+        Args:
+            product_name: The name of the product to look into.
+
+        Returns:
+            A dictionary containing the information mentioned above.
         """
         return self.fetch_product_info(product_name, "prices")["prices"]
