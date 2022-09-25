@@ -1,7 +1,7 @@
 import argparse
 import sys
 
-from notino_scraper import NotinoScraper
+from notino_scraper import NotinoScraper, set_config_parameters, update_datafile
 
 
 # TODO: use numpy docstrings convention
@@ -21,9 +21,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--verbose", action="store_false", help="Sets the verbose to True."
     )
-    parser.add_argument(
-        "--debug", action="store_true", help="Debug mode."
-    )
+    parser.add_argument("--debug", action="store_true", help="Debug mode.")
     parser.add_argument(
         "--config", action="store_true", help="Sets the config in command line."
     )
@@ -65,11 +63,11 @@ if __name__ == "__main__":
     args = parse_args()
 
     if args.output != "":
-        NotinoScraper.update_datafile(args.output)
-        exit()
+        update_datafile(NotinoScraper.config_file, args.output)
+        exit(0)
     if args.config:
-        NotinoScraper.set_config_parameters()
-        exit()
+        set_config_parameters()
+        exit(0)
 
     # This instantiation takes some time.
     notino_scraper = NotinoScraper(args.verbose, args.debug)

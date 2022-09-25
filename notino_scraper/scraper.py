@@ -14,10 +14,12 @@ from selenium.common.exceptions import (
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.webdriver import WebDriver
-from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.ui import WebDriverWait
+from webdriver_manager.firefox import GeckoDriverManager
 
 from .product_not_found import ProductNotFoundException
+from .selectors import CssSelectors
+
 
 # TODO: define a Price TypedDict / dataclass
 
@@ -26,7 +28,7 @@ class Scraper:
     @staticmethod
     def setup_webdriver(url: str = "notino.fr", headless: bool = True) -> WebDriver:
         """
-        Sets up a Selenium WebDriver.
+        Sets up a Selenium WebDriver and opens the main page.
 
         Args:
             url: the base url to log on to.
@@ -39,7 +41,7 @@ class Scraper:
         options = webdriver.FirefoxOptions()
         options.headless = headless
 
-        web_driver = webdriver.Firefox(options=options)
+        web_driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
         try:
             web_driver.get(url)
         except InvalidArgumentException:
@@ -210,16 +212,87 @@ class Scraper:
 
         return _predicate
 
-    def get_first_suggestion(self) -> WebElement:
-        """
-        Finds the first suggestion in the suggestion section.
+    def deal_with_cookie_modal(self) -> None:
+        try:
+            self.web_driver.find_element(
+                By.CSS_SELECTOR, CssSelectors.cookie_modal
+            ).click()
+        except NoSuchElementException:
+            pass
 
-        Returns:
-            The WebElement that points at the first item in the column of suggestions.
+    def find_product_url_in_right_suggestion_column(self, product_name: str) -> str:
+        WebDriverWait(self.web_driver, 3).until(self.search_finalized(product_name))
+
+        return (
+            self.web_driver.find_element(
+                By.CSS_SELECTOR, CssSelectors.right_suggestion_column
+            )
+            .find_elements(By.CSS_SELECTOR, CssSelectors.right_suggestion_item)[0]
+            .get_attribute("href")
+        )
+
+    def find_product_url_in_left_suggestion_column(self, product_name: str) -> str:
         """
-        return self.web_driver.find_element(
-            value="header-suggestSectionCol"
+        Finds the first suggestion in the suggestion section if it matches the product_name.
+        """
+        # taking the first suggestion in the column assuming the search results are already ordered by similarity
+        suggestion = self.web_driver.find_element(
+            value=CssSelectors.left_suggestion_column
         ).find_elements(By.TAG_NAME, "a")[0]
+
+        # checking if there is a 'span' element within the 'a' element
+        if (
+            span := suggestion.find_elements(By.TAG_NAME, "span")
+        ) and self.result_match(span[0].get_attribute("innerHTML"), product_name):
+            return span[0].get_attribute("href")
+        elif self.result_match(suggestion.get_attribute("innerHTML"), product_name):
+            return suggestion.get_attribute("href")
+
+        raise ProductNotFoundException(product_name)
+
+    def find_product_url_in_search_results(self, product_name: str) -> str:
+        try:
+            WebDriverWait(self.web_driver, 3).until(
+                lambda x: x.find_element(value=CssSelectors.product_container)
+            )
+            return next(
+                container.get_attribute("href")
+                for container in self.web_driver.find_elements(
+                    By.CSS_SELECTOR, CssSelectors.product_container
+                )
+                if self.result_match(
+                    container.find_element(By.TAG_NAME, "h3").get_attribute(
+                        "innerHTML"
+                    ),
+                    product_name,
+                )
+            )
+        except (StopIteration, TimeoutException):
+            raise ProductNotFoundException(product_name)
+
+    def navigate_to_product_page(self, product_name: str) -> None:
+        search_bar = self.web_driver.find_element(
+            By.CSS_SELECTOR, CssSelectors.search_bar
+        )
+        search_bar.send_keys(product_name)
+
+        try:
+            self.web_driver.get(
+                self.find_product_url_in_right_suggestion_column(product_name)
+            )
+
+        except TimeoutException:
+            try:
+                self.web_driver.get(
+                    self.find_product_url_in_left_suggestion_column(product_name)
+                )
+            # catching NoSuchElementException in case the left suggestion column is missing
+            except (TimeoutException, ProductNotFoundException, NoSuchElementException):
+                # pressing enter to display the search results
+                search_bar.send_keys(Keys.ENTER)
+                self.web_driver.get(
+                    self.find_product_url_in_search_results(product_name)
+                )
 
     def fetch_product_info(self, product_name: str, *features: str) -> dict:
         """
@@ -232,47 +305,8 @@ class Scraper:
         Returns:
             A dictionary containing the extracted information.
         """
-        # Dealing with the cookie modal.
-        try:
-            self.web_driver.find_element(
-                By.CSS_SELECTOR, "[id='exponea-cookie-compliance'] a[class~=close]"
-            ).click()
-        except NoSuchElementException:
-            pass
-
-        search_bar = self.web_driver.find_element(
-            By.CSS_SELECTOR, "[id='pageHeader'] input"
-        )
-        search_bar.send_keys(product_name)
-
-        try:
-            WebDriverWait(self.web_driver, 3).until(self.search_finalized(product_name))
-            self.web_driver.get(
-                self.web_driver.find_element(
-                    By.CSS_SELECTOR, "div[id='header-suggestProductCol']"
-                )
-                .find_elements(By.CSS_SELECTOR, "a[id='header-productWrapper']")[0]
-                .get_attribute("href")
-            )
-        except TimeoutException:
-            try:
-                suggestion = self.get_first_suggestion()
-                if self.result_match(
-                    suggestion.get_attribute("innerHTML"), product_name
-                ):
-                    self.web_driver.get(suggestion.get_attribute("href"))
-                else:
-                    raise ProductNotFoundException(product_name)
-            except TimeoutException:
-                search_bar.send_keys(Keys.ENTER)
-                WebDriverWait(self.web_driver, 3).until(
-                    lambda x: x.find_element(value="productsList")
-                )
-                self.web_driver.get(
-                    self.web_driver.find_element(value="productsList")
-                    .find_element(By.TAG_NAME, "a")
-                    .get_attribute("href")
-                )
+        self.deal_with_cookie_modal()
+        self.navigate_to_product_page(product_name)
 
         feature_readers, fetched_info = self.set_info_list(), {}
 

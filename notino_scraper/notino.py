@@ -5,8 +5,9 @@ from typing import DefaultDict, List, Tuple
 
 import matplotlib.pyplot as plt
 import seaborn as sns
-from yaml import safe_load, dump, YAMLError
+from yaml import safe_load
 
+from .config_handler import update_datafile, update_img_folder
 from .product import Product
 from .product_list import ProductList
 from .product_not_found import ProductNotFoundException
@@ -18,7 +19,7 @@ class NotinoScraper:
         os.path.dirname(os.path.realpath(__file__)), "..", "config.yml"
     )
 
-    def __init__(self, verbose: bool = True, debug: bool = False) -> None:
+    def __init__(self, verbose: bool = True, debug_mode: bool = False) -> None:
         """
         Loads the config and instantiates a Scraper and a ProductList.
 
@@ -26,7 +27,7 @@ class NotinoScraper:
             verbose: The level of verbose to use. True means more messages printed.
         """
         self.verbose = verbose
-        self.scraper = Scraper(headless=not debug)
+        self.scraper = Scraper(headless=not debug_mode)
         while True:
             try:
                 with open(self.config_file, "r") as stream:
@@ -35,84 +36,10 @@ class NotinoScraper:
                 break
             except (IOError, AssertionError):
                 print("An error occurred when opening the json file.")
-                self.update_datafile(
+                update_datafile(
+                    self.config_file,
                     input("Please specify the path to the output json file: ")
                 )
-
-    @staticmethod
-    def update_config(key: str, new_value: str) -> None:
-        """
-        Updates the value associated with the provided key in the yaml config file.
-
-        Args:
-            key: The key to update.
-            new_value: The value to update with.
-        """
-        with open(NotinoScraper.config_file, "r") as stream:
-            config = safe_load(stream)
-
-        config[key] = new_value
-
-        with open(NotinoScraper.config_file, "w") as stream:
-            try:
-                dump(config, stream, default_flow_style=False, allow_unicode=True)
-            except YAMLError as exc:
-                print(exc)
-
-    @staticmethod
-    def update_datafile(new_datafile: str) -> None:
-        """
-        Updates the value associated with key "datafile" in the yaml config file.
-
-        Args:
-            new_datafile: The value to replace with.
-        """
-        if not new_datafile.endswith(".json"):
-            new_datafile += ".json"
-        assert os.path.isfile(new_datafile), "Invalid file path provided."
-
-        NotinoScraper.update_config("datafile", new_datafile)
-
-    @staticmethod
-    def update_img_folder(new_folder: str) -> None:
-        """
-        Updates the value associated with key "img_folder" in the yaml config file.
-
-        Args:
-            new_folder: The value to replace with.
-        """
-        assert os.path.isdir(new_folder), "Invalid folder path provided."
-
-        NotinoScraper.update_config("img_folder", new_folder)
-
-    @staticmethod
-    def set_config_parameters() -> None:
-        """
-        Sets every existing parameter in the configuration by asking for user input on each of them.
-        Also validates the input and asks for it again if an incorrect value is passed.
-        """
-        enter = "(press ENTER to leave it as it is): "
-        config_parameters = {
-            "datafile": (
-                f"Please specify the path to the output json file {enter}",
-                NotinoScraper.update_datafile,
-            ),
-            "img_folder": (
-                f"Please specify the folder in which the images will be stored {enter}",
-                NotinoScraper.update_img_folder,
-            ),
-        }
-        for parameter in config_parameters:
-            # Asking for user input again and again until a correct value is provided or the default value is kept.
-            while True:
-                user_input = input(config_parameters[parameter][0])
-                try:
-                    if user_input != "":
-                        config_parameters[parameter][1](user_input)
-                    break
-                except AssertionError:
-                    print("Invalid input, please try again.")
-        print("You're all set, thank you.")
 
     def take_snapshot(self) -> None:
         """
@@ -157,7 +84,8 @@ class NotinoScraper:
                 break
             except KeyError as e:
                 if e.args[0] == "img_folder":
-                    self.update_img_folder(
+                    update_img_folder(
+                        self.config_file,
                         input(
                             "Please specify the folder in which the images will be stored: "
                         )
@@ -215,8 +143,8 @@ class NotinoScraper:
                             label=f"{product_name} {volume}",
                         )
                     plt.legend()
-                    plt.xlabel("Temps")
-                    plt.ylabel("Prix (€)")
+                    plt.xlabel("Time")
+                    plt.ylabel("Price (€)")
                     plt.ylim((y_min, y_max))
                     plt.savefig(
                         os.path.join(img_folder, f"price_evolution_{product_name}")
