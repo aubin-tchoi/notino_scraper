@@ -8,9 +8,7 @@ import seaborn as sns
 from yaml import safe_load
 
 from .config_handler import update_datafile, update_img_folder
-from .product import Product
-from .product_list import ProductList
-from .product_not_found import ProductNotFoundException
+from .data_structures import Product, ProductList, ProductNotFoundException
 from .scraper import Scraper
 
 
@@ -38,7 +36,7 @@ class NotinoScraper:
                 print("An error occurred when opening the json file.")
                 update_datafile(
                     self.config_file,
-                    input("Please specify the path to the output json file: ")
+                    input("Please specify the path to the output json file: "),
                 )
 
     def take_snapshot(self) -> None:
@@ -88,7 +86,7 @@ class NotinoScraper:
                         self.config_file,
                         input(
                             "Please specify the folder in which the images will be stored: "
-                        )
+                        ),
                     )
 
         sns.set(color_codes=True)

@@ -1,6 +1,6 @@
 from typing import List, Dict, Any
 
-from .data_structures import ProductInfo
+from notino_scraper.data_structures import ProductInfo
 
 
 class Product:
