@@ -50,7 +50,7 @@ class ProductList:
         try:
             with open(self.filename, "w") as json_file:
                 json.dump([product.__dict__ for product in self.products], json_file)
-        except:
+        except IOError:
             print(f"An issue was raised when saving the json file:\n")
             print(traceback.format_exc())
             with open(self.filename, "w") as json_file:

@@ -12,7 +12,6 @@ from notino_scraper.data_structures import (
     ProductPriceNotFoundException,
 )
 from .navigation_handler import NavigationHandler
-from .selectors import CssSelectors
 from .utils import format_info, get_volume_from_content
 
 
@@ -28,6 +27,7 @@ class Scraper(NavigationHandler):
                 ).get_attribute(attribute)
             )
         except NoSuchElementException:
+
             return "Info not found"
 
     def _get_variants(self) -> List[WebElement]:
@@ -44,6 +44,7 @@ class Scraper(NavigationHandler):
                 .replace(",", ".")
             )
         except NoSuchElementException:
+            print(traceback.format_exc())
             return None
 
     @staticmethod
@@ -88,7 +89,7 @@ class Scraper(NavigationHandler):
     def deal_with_cookie_modal(self) -> None:
         try:
             self.web_driver.find_element(
-                By.CSS_SELECTOR, CssSelectors.cookie_modal
+                By.CSS_SELECTOR, "[id='exponea-cookie-compliance'] a[class~=close]"
             ).click()
         except NoSuchElementException:
             pass
@@ -141,7 +142,7 @@ class Scraper(NavigationHandler):
             prices=self._find_prices() if get_prices else [],
         )
 
-    def get_description(self, product_name: str) -> dict:
+    def get_description(self, product_name: str) -> ProductInfo:
         """
         Finds the following information on a product: name, description and brand name.
 
@@ -153,7 +154,7 @@ class Scraper(NavigationHandler):
         """
         return self.fetch_product_info(product_name, False)
 
-    def get_prices(self, product_name: str) -> list:
+    def get_prices(self, product_name: str) -> List[ProductPrice]:
         """
         Finds the following information on a product: price as of the date the script is run, volume and current date.
 
@@ -163,4 +164,7 @@ class Scraper(NavigationHandler):
         Returns:
             A dictionary containing the information mentioned above.
         """
-        return self.fetch_product_info(product_name)["prices"]
+        self.deal_with_cookie_modal()
+        self.navigate_to_product_page(product_name)
+
+        return self._find_prices()

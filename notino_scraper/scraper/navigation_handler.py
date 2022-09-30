@@ -12,7 +12,6 @@ from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.support.ui import WebDriverWait
 
 from notino_scraper.data_structures.product_not_found import ProductNotFoundException
-from .selectors import CssSelectors
 from .utils import result_match
 from .web_driver_wrapper import WebDriverWrapper
 
@@ -62,9 +61,9 @@ class NavigationHandler(WebDriverWrapper):
 
         return (
             self.web_driver.find_element(
-                By.CSS_SELECTOR, CssSelectors.right_suggestion_column
+                By.CSS_SELECTOR, "div[id='header-suggestProductCol']"
             )
-            .find_elements(By.CSS_SELECTOR, CssSelectors.right_suggestion_item)[0]
+            .find_elements(By.CSS_SELECTOR, "a[id='header-productWrapper']")[0]
             .get_attribute("href")
         )
 
@@ -74,7 +73,7 @@ class NavigationHandler(WebDriverWrapper):
         """
         # taking the first suggestion in the column assuming the search results are already ordered by similarity
         suggestion = self.web_driver.find_element(
-            value=CssSelectors.left_suggestion_column
+            value="header-suggestSectionCol"
         ).find_elements(By.TAG_NAME, "a")[0]
 
         # checking if there is a 'span' element within the 'a' element
@@ -90,12 +89,12 @@ class NavigationHandler(WebDriverWrapper):
     def find_product_url_in_search_results(self, product_name: str) -> str:
         try:
             WebDriverWait(self.web_driver, 3).until(
-                lambda x: x.find_element(value=CssSelectors.product_container)
+                lambda x: x.find_element(value="data-testid='product-container'")
             )
             return next(
                 container.get_attribute("href")
                 for container in self.web_driver.find_elements(
-                    By.CSS_SELECTOR, CssSelectors.product_container
+                    By.CSS_SELECTOR, "data-testid='product-container'"
                 )
                 if result_match(
                     container.find_element(By.TAG_NAME, "h3").get_attribute(
@@ -109,7 +108,7 @@ class NavigationHandler(WebDriverWrapper):
 
     def navigate_to_product_page(self, product_name: str) -> None:
         search_bar = self.web_driver.find_element(
-            By.CSS_SELECTOR, CssSelectors.search_bar
+            By.CSS_SELECTOR, "[id='pageHeader'] input"
         )
         search_bar.send_keys(product_name)
 

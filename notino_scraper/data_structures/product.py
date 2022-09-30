@@ -1,6 +1,6 @@
-from typing import List, Dict, Any
+from typing import List
 
-from notino_scraper.data_structures import ProductInfo
+from notino_scraper.data_structures import ProductInfo, ProductPrice
 
 
 class Product:
@@ -64,19 +64,18 @@ class Product:
             self.prices += other.prices
             return self
 
-    def add_prices(self, prices: List[Dict[str, Any]]) -> None:
+    def add_prices(self, prices: List[ProductPrice]) -> None:
         """
         Adds a price to the list of prices recorded.
 
         Args:
-            prices: A dictionary containing the following information: price, volume and current date.
+            prices: The prices to add.
         """
         for price_info in prices:
-            if price_info["date"] not in [price["date"] for price in self.prices]:
-                self.prices.append(price_info)
-            elif "volume" not in price_info or price_info["volume"] not in [
-                price["volume"] if "volume" in price else "" for price in self.prices
-            ]:
+            if all(
+                (price_info.date, price_info.volume) != (price.date, price.volume)
+                for price in self.prices
+            ):
                 self.prices.append(price_info)
 
     def get_search_name(self) -> str:
