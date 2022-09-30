@@ -131,13 +131,13 @@ class Scraper(NavigationHandler):
 
         return ProductInfo(
             product_name=self._single_selector_reader(
-                "div[id='pdHeader'] [class*=ProductName] span", "innerHTML"
+                "div[id='pdHeader'] h1 span span", "innerHTML"
             ),
             description=self._single_selector_reader(
-                "div[id='pdHeader'] [class*=Description]", "innerHTML"
+                "div[id='pdHeader'] h1 span + span", "innerHTML"
             ),
             brand=self._single_selector_reader(
-                "div[id='pdHeader'] [class*=Brand]", "innerHTML"
+                "div[id='pdHeader'] h1 a", "innerHTML"
             ),
             prices=self._find_prices() if get_prices else [],
         )
