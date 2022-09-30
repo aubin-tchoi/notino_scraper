@@ -1,20 +1,71 @@
 import datetime
 import traceback
+from typing import Optional, List
 
-from selenium.common.exceptions import (
-    NoSuchElementException,
-)
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webelement import WebElement
 
+from notino_scraper.data_structures import (
+    ProductInfo,
+    ProductPrice,
+    ProductPriceNotFoundException,
+)
 from .navigation_handler import NavigationHandler
 from .selectors import CssSelectors
+from .utils import format_info, get_volume_from_content
 
 
 class Scraper(NavigationHandler):
     def __init__(self, url: str = "notino.fr", headless: bool = True):
         super().__init__(url, headless)
 
-    def is_product_available(self) -> bool:
+    def _single_selector_reader(self, css_selector: str, attribute: str) -> str:
+        try:
+            return format_info(
+                self.web_driver.find_element(
+                    By.CSS_SELECTOR, css_selector
+                ).get_attribute(attribute)
+            )
+        except NoSuchElementException:
+            return "Info not found"
+
+    def _get_variants(self) -> List[WebElement]:
+        return self.web_driver.find_element(value="pdVariantsTile").find_elements(
+            By.TAG_NAME, "li"
+        )
+
+    @staticmethod
+    def _read_variant_price(variant: WebElement) -> Optional[float]:
+        try:
+            return float(
+                variant.find_element(By.CSS_SELECTOR, "div > span").get_attribute(
+                    "content"
+                )
+            )
+        except NoSuchElementException:
+            return None
+
+    @staticmethod
+    def _get_variant_volume(variant: WebElement) -> int:
+        return get_volume_from_content(
+            variant.find_element(
+                By.CSS_SELECTOR, "[class~=pd-variant-label]"
+            ).get_attribute("innerHTML")
+        )
+
+    def _get_selected_variant_info(self) -> ProductPrice:
+        return ProductPrice(
+            price=float(self._single_selector_reader("[id=pd-price] span", "content")),
+            volume=get_volume_from_content(
+                self._single_selector_reader(
+                    "[id=pdSelectedVariant] [class*=Name] span", "innerHTML"
+                )
+            ),
+            date=datetime.date.today().isoformat(),
+        )
+
+    def _is_product_available(self) -> bool:
         """
         Checks if the product found on the current page is available.
 
@@ -38,13 +89,34 @@ class Scraper(NavigationHandler):
         except NoSuchElementException:
             pass
 
-    def fetch_product_info(self, product_name: str, *features: str) -> dict:
+    def _find_prices(self) -> List[ProductPrice]:
+        try:
+            return [
+                ProductPrice(
+                    price=self._read_variant_price(variant),
+                    volume=self._get_variant_volume(variant),
+                )
+                for variant in self._get_variants()
+            ]
+        except NoSuchElementException:
+            try:
+                return [self._get_selected_variant_info()]
+            except NoSuchElementException:
+                print(traceback.format_exc())
+                if self._is_product_available():
+                    return [ProductPrice()]
+                else:
+                    raise ProductPriceNotFoundException
+
+    def fetch_product_info(
+        self, product_name: str, get_prices: bool = True
+    ) -> ProductInfo:
         """
         Extracts a list of information on a product.
 
         Args:
             product_name: The name of the product to put in the search bar.
-            features: The features to extract. By default, all of them will be extracted.
+            get_prices: Whether the prices should be retrieved or not.
 
         Returns:
             A dictionary containing the extracted information.
@@ -52,35 +124,18 @@ class Scraper(NavigationHandler):
         self.deal_with_cookie_modal()
         self.navigate_to_product_page(product_name)
 
-        feature_readers, fetched_info = self.set_info_list(), {}
-
-        for feature in features if len(features) > 0 else feature_readers.keys():
-            try:
-                fetched_info[feature] = feature_readers[feature]()
-            except NoSuchElementException:
-                print(
-                    f"Issue raised when retrieving the {feature} on the product {product_name}:\n"
-                )
-                print(traceback.format_exc())
-                if feature == "prices":
-                    if not self.is_product_available():
-                        fetched_info[feature] = [
-                            {
-                                "price": "Product not available.",
-                                "date": datetime.date.today().isoformat(),
-                            }
-                        ]
-                    else:
-                        fetched_info[feature] = [
-                            {
-                                "price": "Price not found.",
-                                "date": datetime.date.today().isoformat(),
-                            }
-                        ]
-                else:
-                    fetched_info[feature] = "Info not found."
-
-        return fetched_info
+        return ProductInfo(
+            product_name=self._single_selector_reader(
+                "div[id='pdHeader'] [class*=ProductName] span", "innerHTML"
+            ),
+            description=self._single_selector_reader(
+                "div[id='pdHeader'] [class*=Description]", "innerHTML"
+            ),
+            brand=self._single_selector_reader(
+                "div[id='pdHeader'] [class*=Brand]", "innerHTML"
+            ),
+            prices=self._find_prices() if get_prices else [],
+        )
 
     def get_description(self, product_name: str) -> dict:
         """
@@ -92,9 +147,7 @@ class Scraper(NavigationHandler):
         Returns:
             A dictionary containing the information mentioned above.
         """
-        return self.fetch_product_info(
-            product_name, "product_name", "description", "brand"
-        )
+        return self.fetch_product_info(product_name, False)
 
     def get_prices(self, product_name: str) -> list:
         """
@@ -106,4 +159,4 @@ class Scraper(NavigationHandler):
         Returns:
             A dictionary containing the information mentioned above.
         """
-        return self.fetch_product_info(product_name, "prices")["prices"]
+        return self.fetch_product_info(product_name)["prices"]
