@@ -39,9 +39,9 @@ class Scraper(NavigationHandler):
     def _read_variant_price(variant: WebElement) -> Optional[float]:
         try:
             return float(
-                variant.find_element(By.CSS_SELECTOR, "div > span").get_attribute(
-                    "content"
-                )
+                variant.find_element(By.CSS_SELECTOR, "div > span")
+                .get_attribute("content")
+                .replace(",", ".")
             )
         except NoSuchElementException:
             return None
@@ -56,7 +56,11 @@ class Scraper(NavigationHandler):
 
     def _get_selected_variant_info(self) -> ProductPrice:
         return ProductPrice(
-            price=float(self._single_selector_reader("[id=pd-price] span", "content")),
+            price=float(
+                self._single_selector_reader("[id=pd-price] span", "content").replace(
+                    ",", "."
+                )
+            ),
             volume=get_volume_from_content(
                 self._single_selector_reader(
                     "[id=pdSelectedVariant] [class*=Name] span", "innerHTML"
