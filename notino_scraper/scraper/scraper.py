@@ -108,7 +108,7 @@ class Scraper(NavigationHandler):
                 return [self._get_selected_variant_info()]
             except NoSuchElementException:
                 print(traceback.format_exc())
-                if self._is_product_available():
+                if not self._is_product_available():
                     return [ProductPrice()]
                 else:
                     raise ProductPriceNotFoundException
