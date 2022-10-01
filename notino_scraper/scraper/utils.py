@@ -24,6 +24,7 @@ def result_match(
     Returns:
         True if the two strings describe the same product, False otherwise.
     """
+    first_string, second_string = first_string.lower(), second_string.lower()
     if first_string in second_string or second_string in first_string:
         return True
 
