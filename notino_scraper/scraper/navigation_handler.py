@@ -134,6 +134,9 @@ class NavigationHandler(WebDriverWrapper):
             ):
                 # pressing enter to display the search results
                 search_bar.send_keys(Keys.ENTER)
-                self.web_driver.get(
-                    self.find_product_url_in_search_results(product_name)
-                )
+                try:
+                    self.web_driver.get(
+                        self.find_product_url_in_search_results(product_name)
+                    )
+                except InvalidArgumentException:
+                    raise ProductNotFoundException
