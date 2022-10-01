@@ -3,6 +3,7 @@ from typing import Callable
 from selenium.common.exceptions import (
     InvalidSelectorException,
     StaleElementReferenceException,
+    InvalidArgumentException,
 )
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
@@ -89,12 +90,14 @@ class NavigationHandler(WebDriverWrapper):
     def find_product_url_in_search_results(self, product_name: str) -> str:
         try:
             WebDriverWait(self.web_driver, 3).until(
-                lambda x: x.find_element(value="data-testid='product-container'")
+                lambda x: x.find_element(
+                    By.CSS_SELECTOR, "[data-testid='product-container']"
+                )
             )
             return next(
                 container.get_attribute("href")
                 for container in self.web_driver.find_elements(
-                    By.CSS_SELECTOR, "data-testid='product-container'"
+                    By.CSS_SELECTOR, "[data-testid='product-container']"
                 )
                 if result_match(
                     container.find_element(By.TAG_NAME, "h3").get_attribute(
@@ -123,7 +126,12 @@ class NavigationHandler(WebDriverWrapper):
                     self.find_product_url_in_left_suggestion_column(product_name)
                 )
             # catching NoSuchElementException in case the left suggestion column is missing
-            except (TimeoutException, ProductNotFoundException, NoSuchElementException):
+            except (
+                TimeoutException,
+                ProductNotFoundException,
+                NoSuchElementException,
+                InvalidArgumentException,
+            ):
                 # pressing enter to display the search results
                 search_bar.send_keys(Keys.ENTER)
                 self.web_driver.get(
