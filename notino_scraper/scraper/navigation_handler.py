@@ -110,6 +110,9 @@ class NavigationHandler(WebDriverWrapper):
             raise ProductNotFoundException(product_name)
 
     def navigate_to_product_page(self, product_name: str) -> None:
+        """
+        FIXME: fix case where the brand page can be found in left suggestion column and opened.
+        """
         search_bar = self.web_driver.find_element(
             By.CSS_SELECTOR, "[id='pageHeader'] input"
         )

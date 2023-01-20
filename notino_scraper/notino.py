@@ -73,6 +73,7 @@ class NotinoScraper:
     def plot_evolution(self) -> None:
         """
         Plots the evolution of the prices of each product and stores the plots in the image folder.
+        FIXME: update in regard to new typing
         """
         while True:
             try:
